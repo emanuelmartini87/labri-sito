@@ -323,6 +323,33 @@
         height: 260px;
       }
     }
+      .social-footer {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .social-icon {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+  .social-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
   </style>
 </head>
 <body>
