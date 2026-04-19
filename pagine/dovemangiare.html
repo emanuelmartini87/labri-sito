@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dove mangiare – Affittacamere L'Abrì</title>
+  <meta name="description" content="Scopri dove mangiare vicino ad Affittacamere L'Abrì: ristoranti consigliati a Pontebernardo, Pietraporzio, Bersezio, Sambuco e Vinadio.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.labri.it/pagine/dove-mangiare.html">
+  <link rel="icon" href="https://www.labri.it/insegna.jpg">
+
+  <style>
+    :root {
+      --bg1: #29486b;
+      --bg2: #5b5b86;
+      --card: rgba(255,255,255,0.96);
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --green: #22c55e;
+      --blue: #2563eb;
+      --purple: #7c3aed;
+      --orange: #f97316;
+      --shadow: 0 16px 40px rgba(0,0,0,.18);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 16px 40px;
+    }
+
+    .top {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+
+    .top h1 {
+      font-size: 2.2rem;
+      margin: 0 0 8px;
+    }
+
+    .top p {
+      margin: 0;
+      opacity: 0.95;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 24px 0 28px;
+    }
+
+    .lang-switch button {
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      background: #e5e7eb;
+      color: #111827;
+      min-width: 150px;
+    }
+
+    .lang-switch button.active {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 22px;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(31,41,55,.12);
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+    }
+
+    .section p, .section li {
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .place-distance {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+
+    .map-link {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 16px;
+      padding: 14px 18px;
+      background: var(--blue);
+      margin-top: 8px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .actions a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 16px;
+      padding: 14px 18px;
+    }
+
+    .btn-home { background: var(--blue); }
+    .btn-accesso { background: var(--purple); }
+    .btn-whatsapp { background: var(--green); }
+
+    .lang-block { display: none; }
+    .lang-block.active { display: block; }
+
+    @media (max-width: 700px) {
+      .top h1 { font-size: 1.8rem; }
+      .card { padding: 22px 16px; }
+      .lang-switch button { min-width: 0; width: 100%; }
+      .actions a, .map-link { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>Affittacamere L'Abrì</h1>
+      <p id="page-subtitle">Dove mangiare</p>
+    </div>
+
+    <div class="lang-switch">
+      <button id="btn-it" onclick="setLanguage('it')">Italiano</button>
+      <button id="btn-en" onclick="setLanguage('en')">English</button>
+      <button id="btn-fr" onclick="setLanguage('fr')">Français</button>
+    </div>
+
+    <div class="card">
+
+      <div class="lang-block lang-it">
+        <div class="intro">
+          Ecco alcuni locali e ristoranti consigliati nelle vicinanze di Affittacamere L'Abrì.
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Ortiche – Bistrot di Montagna</h2>
+          <p class="place-distance">📍 Pontebernardo – 100 metri da noi</p>
+          <p>
+            Bistrot di montagna con cucina locale e prodotti del territorio.
+            Ottimo per una cena tipica a pochi passi dalla struttura.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ortiche+Bistrot+di+Montagna+Pontebernardo" target="_blank" rel="noopener noreferrer">
+            📍 Apri su Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="lang-block lang-en">
+        <div class="intro">
+          Here are some recommended restaurants and places to eat near Affittacamere L'Abrì.
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Ortiche – Mountain Bistro</h2>
+          <p class="place-distance">📍 Pontebernardo – 100 metres from us</p>
+          <p>
+            Mountain bistro with local cuisine and regional products.
+            Ideal for a traditional dinner just a short walk from the property.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ortiche+Bistrot+di+Montagna+Pontebernardo" target="_blank" rel="noopener noreferrer">
+            📍 Open in Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="lang-block lang-fr">
+        <div class="intro">
+          Voici quelques restaurants et adresses conseillés à proximité de Affittacamere L'Abrì.
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Ortiche – Bistrot de Montagne</h2>
+          <p class="place-distance">📍 Pontebernardo – à 100 mètres de chez nous</p>
+          <p>
+            Bistrot de montagne avec cuisine locale et produits du territoire.
+            Idéal pour un dîner typique à quelques pas de la structure.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ortiche+Bistrot+di+Montagna+Pontebernardo" target="_blank" rel="noopener noreferrer">
+            📍 Ouvrir sur Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn-home" href="../index.html">🏠 Home</a>
+        <a class="btn-accesso" href="accesso.html?lang=it">🔐 Istruzioni accesso</a>
+        <a class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const initialLang = params.get('lang') || 'it';
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-block').forEach(block => {
+        block.classList.remove('active');
+      });
+
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      const activeBlock = document.querySelector('.lang-' + lang);
+      const activeButton = document.getElementById('btn-' + lang);
+
+      if (activeBlock) activeBlock.classList.add('active');
+      if (activeButton) activeButton.classList.add('active');
+
+      const titles = {
+        it: 'Dove mangiare',
+        en: 'Where to eat',
+        fr: 'Où manger'
+      };
+
+      document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
+
+      const newUrl = new URL(window.location);
+      newUrl.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', newUrl);
+    }
+
+    setLanguage(initialLang);
+  </script>
+</body>
+</html>
