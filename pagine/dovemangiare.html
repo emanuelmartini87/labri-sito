@@ -9,14 +9,9 @@
   <meta name="description" content="Scopri dove mangiare vicino ad Affittacamere L'Abrì: ristoranti consigliati a Pontebernardo, Pietraporzio, Bersezio, Sambuco e Vinadio, in Valle Stura.">
 
   <meta name="robots" content="index, follow">
-
-  <!-- CANONICAL -->
   <link rel="canonical" href="https://www.labri.it/pagine/dovemangiare.html">
-
-  <!-- ICONA -->
   <link rel="icon" type="image/jpeg" href="https://www.labri.it/insegna.jpg">
 
-  <!-- 🔵 OPEN GRAPH (Facebook, WhatsApp, ecc) -->
   <meta property="og:title" content="Dove mangiare a Pontebernardo e in Valle Stura | Affittacamere L'Abrì">
   <meta property="og:description" content="Scopri dove mangiare vicino ad Affittacamere L'Abrì: ristoranti consigliati a Pontebernardo, Pietraporzio, Bersezio, Sambuco e Vinadio, in Valle Stura.">
   <meta property="og:type" content="website">
@@ -26,26 +21,33 @@
   <meta property="og:site_name" content="Affittacamere L'Abrì">
   <meta http-equiv="content-language" content="it">
 
-  <!-- 🐦 TWITTER / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dove mangiare a Pontebernardo e in Valle Stura | Affittacamere L'Abrì">
   <meta name="twitter:description" content="Scopri dove mangiare vicino ad Affittacamere L'Abrì: ristoranti a Pontebernardo, Pietraporzio, Bersezio, Sambuco e Vinadio.">
   <meta name="twitter:image" content="https://www.labri.it/insegna.jpg">
 
-  <!-- CSS -->
   <style>
-    /* il tuo CSS resta qui sotto */
     :root {
-      --bg1: #29486b;
-      --bg2: #5b5b86;
-      --card: rgba(255,255,255,0.96);
-      --text: #1f2937;
-      --muted: #5f6b7a;
-      --green: #22c55e;
-      --blue: #2563eb;
-      --purple: #7c3aed;
-      --orange: #f97316;
-      --shadow: 0 16px 40px rgba(0,0,0,.18);
+      --bg1: #324b63;
+      --bg2: #66707d;
+      --card: rgba(247, 241, 232, 0.97);
+      --text: #31251d;
+      --muted: #6d6258;
+
+      --wood: #8a5b3d;
+      --wood-dark: #6f472f;
+      --forest: #55684d;
+      --rust: #b46e45;
+      --stone: #ded4c8;
+      --cream: #f7f1e8;
+      --gold: #c7a671;
+
+      --green: #55684d;
+      --blue: #3f5f7a;
+      --purple: #7a604a;
+      --orange: #b46e45;
+
+      --shadow: 0 16px 38px rgba(0,0,0,.15);
       --radius: 24px;
     }
 
@@ -57,72 +59,104 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
     }
 
     .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 16px 40px;
+      width: 100%;
+      max-width: 860px;
+      padding: 22px 18px 44px;
     }
 
     .top {
       text-align: center;
       color: #fff;
-      margin-bottom: 24px;
+      padding: 18px 8px 10px;
     }
 
     .top h1 {
-      font-size: 2.2rem;
-      margin: 0 0 8px;
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: .2px;
+      text-shadow: 0 2px 10px rgba(0,0,0,.14);
     }
 
     .top p {
-      margin: 0;
-      opacity: 0.95;
+      margin: 8px 0 4px;
+      font-size: 1.15rem;
+      opacity: .95;
     }
 
     .lang-switch {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 12px;
-      flex-wrap: wrap;
-      margin: 24px 0 28px;
+      margin: 6px auto 12px;
+      width: fit-content;
     }
 
     .lang-switch button {
       border: 0;
-      border-radius: 999px;
-      padding: 14px 22px;
-      font-size: 1rem;
-      font-weight: 700;
       cursor: pointer;
-      background: #e5e7eb;
-      color: #111827;
-      min-width: 150px;
+      transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+      background: transparent;
+      padding: 0;
+    }
+
+    .lang-switch button:hover {
+      transform: translateY(-1px) scale(1.04);
+    }
+
+    .lang-switch button.flag-btn {
+      width: 54px;
+      height: 54px;
+      padding: 4px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      box-shadow: 0 6px 16px rgba(0,0,0,.16);
+    }
+
+    .lang-switch button.flag-btn img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     .lang-switch button.active {
-      background: var(--blue);
-      color: #fff;
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,.96),
+        0 0 0 6px rgba(199,166,113,.30),
+        0 8px 20px rgba(0,0,0,.18);
     }
 
     .card {
-      background: var(--card);
+      background: linear-gradient(180deg, rgba(247,241,232,0.98), rgba(241,234,224,0.96));
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 28px 22px;
+      border: 1px solid rgba(111,71,47,.12);
     }
 
     .intro {
       font-size: 1.05rem;
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 18px;
+      color: var(--muted);
     }
 
     .section {
       margin-top: 22px;
       padding-top: 18px;
-      border-top: 1px solid rgba(31,41,55,.12);
+      border-top: 1px solid rgba(111,71,47,.12);
     }
 
     .section:first-of-type {
@@ -137,7 +171,7 @@
     }
 
     .section p, .section li {
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--text);
     }
 
@@ -149,14 +183,25 @@
     }
 
     .map-link {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      color: #fff;
       font-weight: 700;
       border-radius: 16px;
       padding: 14px 18px;
-      background: var(--blue);
       margin-top: 8px;
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(245,239,231,.88));
+      color: var(--text);
+      border: 2px solid rgba(111,71,47,.16);
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+    .map-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(248,243,236,.98));
     }
 
     .actions {
@@ -167,17 +212,36 @@
     }
 
     .actions a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      color: #fff;
       font-weight: 700;
-      border-radius: 16px;
+      border-radius: 18px;
       padding: 14px 18px;
+      min-height: 58px;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      border: 2px solid rgba(111,71,47,.18);
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
     }
 
-    .btn-home { background: var(--blue); }
-    .btn-accesso { background: var(--purple); }
-    .btn-whatsapp { background: var(--green); }
+    .actions a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+    }
+
+    .btn-home,
+    .btn-accesso {
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(245,239,231,.88));
+      color: var(--text);
+      border-color: rgba(111,71,47,.16);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(180deg, #55684d, #46563f);
+      color: #fff;
+      border-color: rgba(255,255,255,.10);
+    }
 
     .lang-block { display: none; }
     .lang-block.active { display: block; }
@@ -185,8 +249,11 @@
     @media (max-width: 700px) {
       .top h1 { font-size: 1.8rem; }
       .card { padding: 22px 16px; }
-      .lang-switch button { min-width: 0; width: 100%; }
       .actions a, .map-link { width: 100%; text-align: center; }
+      .lang-switch button.flag-btn {
+        width: 48px;
+        height: 48px;
+      }
     }
   </style>
 </head>
@@ -197,10 +264,16 @@
       <p id="page-subtitle">Dove mangiare</p>
     </div>
 
-    <div class="lang-switch">
-      <button id="btn-it" onclick="setLanguage('it')">Italiano</button>
-      <button id="btn-en" onclick="setLanguage('en')">English</button>
-      <button id="btn-fr" onclick="setLanguage('fr')">Français</button>
+    <div class="lang-switch" role="tablist" aria-label="Language selector">
+      <button id="btn-it" class="flag-btn" onclick="setLanguage('it')" aria-label="Italiano" title="Italiano">
+        <img src="https://flagcdn.com/w80/it.png" alt="Italiano">
+      </button>
+      <button id="btn-en" class="flag-btn" onclick="setLanguage('en')" aria-label="English" title="English">
+        <img src="https://flagcdn.com/w80/gb.png" alt="English">
+      </button>
+      <button id="btn-fr" class="flag-btn" onclick="setLanguage('fr')" aria-label="Français" title="Français">
+        <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+      </button>
     </div>
 
     <div class="card">
@@ -221,7 +294,8 @@
             📍 Apri su Google Maps
           </a>
         </div>
-          <div class="section">
+
+        <div class="section">
           <h2>🍽️ Centro Sentieri</h2>
           <p class="place-distance">📍 Pietraporzio – 1 km da noi</p>
           <p>
@@ -232,7 +306,8 @@
             📍 Apri su Google Maps
           </a>
         </div>
-          <div class="section">
+
+        <div class="section">
           <h2>🍽️ L’Oste d’Oc</h2>
           <p class="place-distance">📍 Pietraporzio – 1 km da noi</p>
           <p>
@@ -244,7 +319,8 @@
             📍 Apri su Google Maps
           </a>
         </div>
-          <div class="section">
+
+        <div class="section">
           <h2>🍽️ Regina delle Alpi</h2>
           <p class="place-distance">📍 Pietraporzio – 1 km da noi</p>
           <p>
@@ -254,8 +330,9 @@
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Regina+delle+Alpi+Pietraporzio" target="_blank" rel="noopener noreferrer">
             📍 Apri su Google Maps
           </a>
-        </div>  
-          <div class="section">
+        </div>
+
+        <div class="section">
           <h2>🍽️ La Meridiana</h2>
           <p class="place-distance">📍 Sambuco – 5 km da noi</p>
           <p>
@@ -266,7 +343,8 @@
             📍 Apri su Google Maps
           </a>
         </div>
-          <div class="section">
+
+        <div class="section">
           <h2>🍽️ Ristorante della Pace</h2>
           <p class="place-distance">📍 Sambuco – 5 km da noi</p>
           <p>
@@ -276,8 +354,9 @@
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Albergo+della+Pace+Sambuco" target="_blank" rel="noopener noreferrer">
             📍 Apri su Google Maps
           </a>
-        </div> 
-          <div class="section">
+        </div>
+
+        <div class="section">
           <h2>🍽️ Trattoria da Mo</h2>
           <p class="place-distance">📍 Bersezio – 5 km da noi</p>
           <p>
@@ -287,8 +366,9 @@
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Trattoria+da+Mo+Bersezio" target="_blank" rel="noopener noreferrer">
             📍 Apri su Google Maps
           </a>
-        </div>       
-          <div class="section">
+        </div>
+
+        <div class="section">
           <h2>🍽️ La Locanda di Vinadio</h2>
           <p class="place-distance">📍 Vinadio – 16 km da noi</p>
           <p>
@@ -298,8 +378,7 @@
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=La+Locanda+di+Vinadio" target="_blank" rel="noopener noreferrer">
             📍 Apri su Google Maps
           </a>
-        </div>        
-        
+        </div>
       </div>
 
       <div class="lang-block lang-en">
@@ -318,6 +397,7 @@
             📍 Open in Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Centro Sentieri</h2>
           <p class="place-distance">📍 Pietraporzio – 1 km from us</p>
@@ -329,6 +409,7 @@
             📍 Open in Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ L’Oste d’Oc</h2>
           <p class="place-distance">📍 Pietraporzio – 1 km from us</p>
@@ -340,6 +421,7 @@
             📍 Open in Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Regina delle Alpi</h2>
           <p class="place-distance">📍 Pietraporzio – 1 km from us</p>
@@ -351,6 +433,7 @@
             📍 Open in Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ La Meridiana</h2>
           <p class="place-distance">📍 Sambuco – 5 km from us</p>
@@ -362,6 +445,7 @@
             📍 Open in Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Ristorante della Pace</h2>
           <p class="place-distance">📍 Sambuco – 5 km from us</p>
@@ -373,6 +457,7 @@
             📍 Open in Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Trattoria da Mo</h2>
           <p class="place-distance">📍 Bersezio – 5 km from us</p>
@@ -384,6 +469,7 @@
             📍 Open in Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ La Locanda di Vinadio</h2>
           <p class="place-distance">📍 Vinadio – 16 km from us</p>
@@ -392,10 +478,9 @@
             Wide selection of dishes and pizzas, perfect for an informal dinner.
           </p>
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=La+Locanda+di+Vinadio" target="_blank" rel="noopener noreferrer">
-           📍 Open in Google Maps
+            📍 Open in Google Maps
           </a>
         </div>
-       
       </div>
 
       <div class="lang-block lang-fr">
@@ -414,6 +499,7 @@
             📍 Ouvrir sur Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Centro Sentieri</h2>
           <p class="place-distance">📍 Pietraporzio – à 1 km de chez nous</p>
@@ -425,6 +511,7 @@
             📍 Ouvrir sur Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ L’Oste d’Oc</h2>
           <p class="place-distance">📍 Pietraporzio – à 1 km de chez nous</p>
@@ -436,6 +523,7 @@
             📍 Ouvrir sur Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Regina delle Alpi</h2>
           <p class="place-distance">📍 Pietraporzio – à 1 km de chez nous</p>
@@ -447,6 +535,7 @@
             📍 Ouvrir sur Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ La Meridiana</h2>
           <p class="place-distance">📍 Sambuco – à 5 km de chez nous</p>
@@ -458,6 +547,7 @@
             📍 Ouvrir sur Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Ristorante della Pace</h2>
           <p class="place-distance">📍 Sambuco – à 5 km de chez nous</p>
@@ -469,6 +559,7 @@
             📍 Ouvrir sur Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ Trattoria da Mo</h2>
           <p class="place-distance">📍 Bersezio – à 5 km de chez nous</p>
@@ -480,6 +571,7 @@
             📍 Ouvrir sur Google Maps
           </a>
         </div>
+
         <div class="section">
           <h2>🍽️ La Locanda di Vinadio</h2>
           <p class="place-distance">📍 Vinadio – à 16 km de chez nous</p>
@@ -490,12 +582,12 @@
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=La+Locanda+di+Vinadio" target="_blank" rel="noopener noreferrer">
             📍 Ouvrir sur Google Maps
           </a>
-        </div>        
+        </div>
       </div>
 
       <div class="actions">
         <a class="btn-home" href="../index.html">🏠 Home</a>
-        <a class="btn-accesso" href="accesso.html?lang=it">🔐 Istruzioni accesso</a>
+        <a class="btn-accesso" id="accesso-link" href="accesso.html?lang=it">🔐 Istruzioni accesso</a>
         <a class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
       </div>
     </div>
@@ -526,7 +618,17 @@
         fr: 'Où manger'
       };
 
+      const accessoLabels = {
+        it: '🔐 Istruzioni accesso',
+        en: '🔐 Access instructions',
+        fr: "🔐 Instructions d'accès"
+      };
+
       document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
+
+      const accessoLink = document.getElementById('accesso-link');
+      accessoLink.href = 'accesso.html?lang=' + lang;
+      accessoLink.textContent = accessoLabels[lang] || accessoLabels.it;
 
       const newUrl = new URL(window.location);
       newUrl.searchParams.set('lang', lang);
