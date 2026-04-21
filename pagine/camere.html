@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Camere – Affittacamere L'Abrì | Pietraporzio, Valle Stura</title>
-  <meta name="description" content="Scopri presto la sezione camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura. Pagina in aggiornamento.">
+  <meta name="description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura. Foto e informazioni sulle nostre 5 camere.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#324b63">
   <meta http-equiv="content-language" content="it">
@@ -13,14 +13,14 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
   <meta property="og:title" content="Camere – Affittacamere L'Abrì">
-  <meta property="og:description" content="La pagina dedicata alle camere è attualmente in preparazione.">
+  <meta property="og:description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura.">
   <meta property="og:url" content="https://www.labri.it/pagine/camere.html">
   <meta property="og:site_name" content="Labri – Affittacamere L'Abrì">
   <meta property="og:image" content="https://www.labri.it/insegna.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Camere – Affittacamere L'Abrì">
-  <meta name="twitter:description" content="La pagina dedicata alle camere è attualmente in preparazione.">
+  <meta name="twitter:description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura.">
   <meta name="twitter:image" content="https://www.labri.it/insegna.jpg">
 
   <link rel="canonical" href="https://www.labri.it/pagine/camere.html">
@@ -157,8 +157,8 @@
       background: #d8d2c7;
     }
 
-    .content {
-      padding: 26px 20px 24px;
+    .intro-content {
+      padding: 26px 20px 10px;
     }
 
     .page-title {
@@ -174,16 +174,41 @@
       font-size: 1.04rem;
     }
 
-    .notice-box {
-      background: #f3ede5;
-      border: 1px solid rgba(111,71,47,.10);
-      border-radius: 18px;
-      padding: 18px 16px;
+    .room-card {
+      margin: 0 20px 22px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(111,71,47,.12);
+    }
+
+    .room-title {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
       color: var(--wood-dark);
-      font-weight: 700;
-      text-align: center;
-      line-height: 1.7;
-      margin-bottom: 18px;
+    }
+
+    .room-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .room-gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+      display: block;
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+      background: #d8d2c7;
+    }
+
+    .room-text {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1rem;
     }
 
     .action-row {
@@ -253,6 +278,14 @@
         height: 48px;
       }
 
+      .room-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .room-gallery img {
+        height: 220px;
+      }
+
       .action-btn {
         width: 100%;
       }
@@ -287,55 +320,98 @@
           <img src="../insegna.jpg" alt="Camere di Affittacamere L'Abrì a Pietraporzio">
         </div>
 
-        <div class="content lang-content" data-lang-content="it">
-          <h2 class="page-title">Camere</h2>
+        <div class="intro-content lang-content" data-lang-content="it">
+          <h2 class="page-title">Le nostre camere</h2>
           <p class="page-text">
-            La pagina dedicata alle nostre camere è attualmente in preparazione.
-            Stiamo lavorando per aggiungere foto, descrizioni e dettagli delle 5 camere di Affittacamere L'Abrì.
+            Scopri le nostre 5 camere ad Affittacamere L'Abrì. Ogni camera è pensata per offrire un soggiorno accogliente e rilassante nel cuore della Valle Stura.
           </p>
-          <div class="notice-box">
-            Pagina in costruzione.<br>
-            Tornate presto per scoprire tutte le camere disponibili.
+        </div>
+
+        <div class="intro-content lang-content hidden" data-lang-content="en">
+          <h2 class="page-title">Our rooms</h2>
+          <p class="page-text">
+            Discover our 5 rooms at Affittacamere L'Abrì. Each room is designed to offer a welcoming and relaxing stay in the heart of Valle Stura.
+          </p>
+        </div>
+
+        <div class="intro-content lang-content hidden" data-lang-content="fr">
+          <h2 class="page-title">Nos chambres</h2>
+          <p class="page-text">
+            Découvrez nos 5 chambres à Affittacamere L'Abrì. Chaque chambre est pensée pour offrir un séjour chaleureux et relaxant au cœur de la Valle Stura.
+          </p>
+        </div>
+
+        <div class="intro-content lang-content hidden" data-lang-content="de">
+          <h2 class="page-title">Unsere Zimmer</h2>
+          <p class="page-text">
+            Entdecken Sie unsere 5 Zimmer im Affittacamere L'Abrì. Jedes Zimmer ist darauf ausgelegt, einen gemütlichen und entspannenden Aufenthalt im Herzen des Valle Stura zu bieten.
+          </p>
+        </div>
+
+        <div class="room-card">
+          <h3 class="room-title" id="room1-title">Camera 1</h3>
+          <div class="room-gallery">
+            <img src="../immagini/camere/camera1-1.jpg" alt="Camera 1 - Affittacamere L'Abrì">
+            <img src="../immagini/camere/camera1-2.jpg" alt="Camera 1 - Affittacamere L'Abrì seconda foto">
+          </div>
+          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
+          <div class="action-row">
+            <a class="action-btn btn-light" href="camera1.html?lang=it" id="room1-link">Vedi dettagli</a>
           </div>
         </div>
 
-        <div class="content lang-content hidden" data-lang-content="en">
-          <h2 class="page-title">Rooms</h2>
-          <p class="page-text">
-            The page dedicated to our rooms is currently being prepared.
-            We are working on adding photos, descriptions and details of the 5 rooms at Affittacamere L'Abrì.
-          </p>
-          <div class="notice-box">
-            Page under construction.<br>
-            Please come back soon to discover all available rooms.
+        <div class="room-card">
+          <h3 class="room-title" id="room2-title">Camera 2</h3>
+          <div class="room-gallery">
+            <img src="../immagini/camere/camera2-1.jpg" alt="Camera 2 - Affittacamere L'Abrì">
+            <img src="../immagini/camere/camera2-2.jpg" alt="Camera 2 - Affittacamere L'Abrì seconda foto">
           </div>
+          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
         </div>
 
-        <div class="content lang-content hidden" data-lang-content="fr">
-          <h2 class="page-title">Chambres</h2>
-          <p class="page-text">
-            La page dédiée à nos chambres est actuellement en préparation.
-            Nous travaillons à ajouter les photos, descriptions et détails des 5 chambres de Affittacamere L'Abrì.
-          </p>
-          <div class="notice-box">
-            Page en construction.<br>
-            Revenez bientôt pour découvrir toutes les chambres disponibles.
+        <div class="room-card">
+          <h3 class="room-title" id="room3-title">Camera 3</h3>
+          <div class="room-gallery">
+            <img src="../immagini/camere/camera3-1.jpg" alt="Camera 3 - Affittacamere L'Abrì">
+            <img src="../immagini/camere/camera3-2.jpg" alt="Camera 3 - Affittacamere L'Abrì seconda foto">
           </div>
+          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
         </div>
 
-        <div class="content lang-content hidden" data-lang-content="de">
-          <h2 class="page-title">Zimmer</h2>
-          <p class="page-text">
-            Die Seite mit unseren Zimmern befindet sich derzeit in Vorbereitung.
-            Wir arbeiten daran, Fotos, Beschreibungen und Details der 5 Zimmer von Affittacamere L'Abrì hinzuzufügen.
-          </p>
-          <div class="notice-box">
-            Seite im Aufbau.<br>
-            Schauen Sie bald wieder vorbei, um alle verfügbaren Zimmer zu entdecken.
+        <div class="room-card">
+          <h3 class="room-title" id="room4-title">Camera 4</h3>
+          <div class="room-gallery">
+            <img src="../immagini/camere/camera4-1.jpg" alt="Camera 4 - Affittacamere L'Abrì">
+            <img src="../immagini/camere/camera4-2.jpg" alt="Camera 4 - Affittacamere L'Abrì seconda foto">
           </div>
+          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
         </div>
 
-        <div class="content">
+        <div class="room-card">
+          <h3 class="room-title" id="room5-title">Camera 5</h3>
+          <div class="room-gallery">
+            <img src="../immagini/camere/camera5-1.jpg" alt="Camera 5 - Affittacamere L'Abrì">
+            <img src="../immagini/camere/camera5-2.jpg" alt="Camera 5 - Affittacamere L'Abrì seconda foto">
+          </div>
+          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
+        </div>
+
+        <div class="intro-content">
           <div class="action-row">
             <a id="action-book" class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Prenota</a>
             <a id="action-whatsapp" class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
@@ -372,23 +448,34 @@
         it: {
           book: 'Prenota',
           whatsapp: 'WhatsApp',
-          home: 'Torna alla home'
+          home: 'Torna alla home',
+          details: 'Vedi dettagli'
         },
         en: {
           book: 'Book now',
           whatsapp: 'WhatsApp',
-          home: 'Back to home'
+          home: 'Back to home',
+          details: 'View details'
         },
         fr: {
           book: 'Réserver',
           whatsapp: 'WhatsApp',
-          home: "Retour à l’accueil"
+          home: "Retour à l’accueil",
+          details: 'Voir les détails'
         },
         de: {
           book: 'Buchen',
           whatsapp: 'WhatsApp',
-          home: 'Zur Startseite'
+          home: 'Zur Startseite',
+          details: 'Details ansehen'
         }
+      };
+
+      const roomTitles = {
+        it: ['Camera 1', 'Camera 2', 'Camera 3', 'Camera 4', 'Camera 5'],
+        en: ['Room 1', 'Room 2', 'Room 3', 'Room 4', 'Room 5'],
+        fr: ['Chambre 1', 'Chambre 2', 'Chambre 3', 'Chambre 4', 'Chambre 5'],
+        de: ['Zimmer 1', 'Zimmer 2', 'Zimmer 3', 'Zimmer 4', 'Zimmer 5']
       };
 
       document.getElementById('page-subtitle').textContent = subtitles[lang] || subtitles.it;
@@ -397,6 +484,15 @@
       document.getElementById('action-book').textContent = labels.book;
       document.getElementById('action-whatsapp').textContent = labels.whatsapp;
       document.getElementById('action-home').textContent = labels.home;
+      document.getElementById('room1-link').textContent = labels.details;
+      document.getElementById('room1-link').href = 'camera1.html?lang=' + lang;
+
+      const titles = roomTitles[lang] || roomTitles.it;
+      document.getElementById('room1-title').textContent = titles[0];
+      document.getElementById('room2-title').textContent = titles[1];
+      document.getElementById('room3-title').textContent = titles[2];
+      document.getElementById('room4-title').textContent = titles[3];
+      document.getElementById('room5-title').textContent = titles[4];
     }
 
     function getLangFromUrl() {
