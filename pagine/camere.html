@@ -4,27 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Camere – Affittacamere L'Abrì | Pietraporzio, Valle Stura</title>
-  <meta name="description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura. Foto e informazioni sulle nostre 5 camere.">
+  <title>Camere a Pietraporzio, Valle Stura | Affittacamere L'Abrì</title>
+  <meta name="description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura. Guarda le foto e scopri le nostre 5 camere.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#324b63">
   <meta http-equiv="content-language" content="it">
-
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="it_IT">
-  <meta property="og:title" content="Camere – Affittacamere L'Abrì">
-  <meta property="og:description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura.">
-  <meta property="og:url" content="https://www.labri.it/pagine/camere.html">
-  <meta property="og:site_name" content="Labri – Affittacamere L'Abrì">
-  <meta property="og:image" content="https://www.labri.it/insegna.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Camere – Affittacamere L'Abrì">
-  <meta name="twitter:description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura.">
-  <meta name="twitter:image" content="https://www.labri.it/insegna.jpg">
+  <meta name="theme-color" content="#324b63">
 
   <link rel="canonical" href="https://www.labri.it/pagine/camere.html">
-  <link rel="icon" href="https://www.labri.it/insegna.jpg">
+  <link rel="icon" type="image/jpeg" href="https://www.labri.it/insegna.jpg">
+
+  <meta property="og:title" content="Camere a Pietraporzio, Valle Stura | Affittacamere L'Abrì">
+  <meta property="og:description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.labri.it/pagine/camere.html">
+  <meta property="og:image" content="https://www.labri.it/insegna.jpg">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Affittacamere L'Abrì">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Camere a Pietraporzio, Valle Stura | Affittacamere L'Abrì">
+  <meta name="twitter:description" content="Scopri le camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura.">
+  <meta name="twitter:image" content="https://www.labri.it/insegna.jpg">
 
   <style>
     :root {
@@ -66,19 +66,19 @@
       justify-content: center;
     }
 
-    .page {
+    .wrap {
       width: 100%;
       max-width: 860px;
       padding: 22px 18px 44px;
     }
 
-    .hero {
-      color: #fff;
+    .top {
       text-align: center;
+      color: #fff;
       padding: 18px 8px 10px;
     }
 
-    .hero h1 {
+    .top h1 {
       margin: 0;
       font-size: clamp(2rem, 5vw, 3rem);
       line-height: 1.05;
@@ -86,7 +86,7 @@
       text-shadow: 0 2px 10px rgba(0,0,0,.14);
     }
 
-    .hero p {
+    .top p {
       margin: 8px 0 4px;
       font-size: 1.15rem;
       opacity: .95;
@@ -97,12 +97,12 @@
       justify-content: center;
       align-items: center;
       gap: 12px;
-      margin: 10px auto 14px;
+      margin: 6px auto 12px;
       width: fit-content;
       flex-wrap: wrap;
     }
 
-    .lang-btn {
+    .lang-switch button {
       border: 0;
       cursor: pointer;
       transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
@@ -110,11 +110,11 @@
       padding: 0;
     }
 
-    .lang-btn:hover {
+    .lang-switch button:hover {
       transform: translateY(-1px) scale(1.04);
     }
 
-    .flag-btn {
+    .lang-switch button.flag-btn {
       width: 54px;
       height: 54px;
       padding: 4px;
@@ -123,7 +123,7 @@
       box-shadow: 0 6px 16px rgba(0,0,0,.16);
     }
 
-    .flag-btn img {
+    .lang-switch button.flag-btn img {
       width: 100%;
       height: 100%;
       display: block;
@@ -131,7 +131,7 @@
       object-fit: cover;
     }
 
-    .flag-btn.active {
+    .lang-switch button.active {
       box-shadow:
         0 0 0 2px rgba(255,255,255,.96),
         0 0 0 6px rgba(199,166,113,.30),
@@ -141,14 +141,13 @@
     .card {
       background: linear-gradient(180deg, rgba(247,241,232,0.98), rgba(241,234,224,0.96));
       border-radius: var(--radius);
-      padding: 0;
       box-shadow: var(--shadow);
-      margin-bottom: 18px;
+      padding: 0;
       border: 1px solid rgba(111,71,47,.12);
       overflow: hidden;
     }
 
-    .cover img {
+    .hero-image img {
       width: 100%;
       height: 320px;
       object-fit: cover;
@@ -157,33 +156,39 @@
       background: #d8d2c7;
     }
 
-    .intro-content {
-      padding: 26px 20px 10px;
+    .inner {
+      padding: 28px 22px;
     }
 
-    .page-title {
-      margin: 0 0 10px;
-      font-size: clamp(1.7rem, 4vw, 2.3rem);
-      line-height: 1.15;
-    }
-
-    .page-text {
-      margin: 0 0 18px;
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 18px;
       color: var(--muted);
-      line-height: 1.8;
-      font-size: 1.04rem;
     }
 
-    .room-card {
-      margin: 0 20px 22px;
+    .room {
+      margin-top: 22px;
       padding-top: 22px;
       border-top: 1px solid rgba(111,71,47,.12);
     }
 
-    .room-title {
+    .room:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .room h2 {
+      font-size: 1.3rem;
       margin: 0 0 14px;
-      font-size: 1.45rem;
       color: var(--wood-dark);
+    }
+
+    .room p {
+      line-height: 1.75;
+      color: var(--text);
+      margin: 0 0 14px;
     }
 
     .room-gallery {
@@ -204,315 +209,416 @@
       background: #d8d2c7;
     }
 
-    .room-text {
-      margin: 0 0 16px;
-      color: var(--muted);
-      line-height: 1.75;
-      font-size: 1rem;
-    }
-
-    .action-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 4px;
-    }
-
-    .action-btn {
+    .room-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 56px;
-      border-radius: 16px;
       text-decoration: none;
-      font-size: 1rem;
       font-weight: 700;
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-      padding: 12px 18px;
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin-top: 4px;
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(245,239,231,.88));
+      color: var(--text);
       border: 2px solid rgba(111,71,47,.16);
       box-shadow: 0 8px 18px rgba(0,0,0,.10);
-      text-align: center;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
     }
 
-    .action-btn:hover {
+    .room-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(248,243,236,.98));
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 18px;
+      padding: 14px 18px;
+      min-height: 58px;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      border: 2px solid rgba(111,71,47,.18);
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    }
+
+    .actions a:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 22px rgba(0,0,0,.14);
     }
 
-    .btn-orange {
-      background: linear-gradient(180deg, #b46e45, #9f5f3a);
-      color: #fff;
-      border-color: rgba(255,255,255,.10);
+    .btn-home,
+    .btn-book {
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(245,239,231,.88));
+      color: var(--text);
+      border-color: rgba(111,71,47,.16);
     }
 
-    .btn-green {
+    .btn-whatsapp {
       background: linear-gradient(180deg, #55684d, #46563f);
       color: #fff;
       border-color: rgba(255,255,255,.10);
     }
 
-    .btn-light {
-      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(245,239,231,.95));
-      color: var(--text);
-    }
+    .lang-block { display: none; }
+    .lang-block.active { display: block; }
 
-    .footer {
-      text-align: center;
-      color: rgba(255,255,255,.92);
-      padding-top: 10px;
-      font-size: .98rem;
-      line-height: 1.7;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    @media (max-width: 719px) {
-      .cover img {
-        height: 240px;
-      }
-
-      .flag-btn {
+    @media (max-width: 700px) {
+      .top h1 { font-size: 1.8rem; }
+      .inner { padding: 22px 16px; }
+      .hero-image img { height: 240px; }
+      .room-gallery { grid-template-columns: 1fr; }
+      .room-gallery img { height: 220px; }
+      .actions a, .room-link { width: 100%; text-align: center; }
+      .lang-switch button.flag-btn {
         width: 48px;
         height: 48px;
-      }
-
-      .room-gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .room-gallery img {
-        height: 220px;
-      }
-
-      .action-btn {
-        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header class="hero">
+  <div class="wrap">
+    <div class="top">
       <h1>Affittacamere L'Abrì</h1>
-      <p id="page-subtitle">Camere a Pietraporzio, Valle Stura</p>
+      <p id="page-subtitle">Le nostre camere</p>
+    </div>
 
-      <div class="lang-switch" role="tablist" aria-label="Language selector">
-        <button id="btn-it" class="lang-btn flag-btn" data-lang="it" aria-label="Italiano" title="Italiano">
-          <img src="https://flagcdn.com/w80/it.png" alt="Italiano">
-        </button>
-        <button id="btn-en" class="lang-btn flag-btn" data-lang="en" aria-label="English" title="English">
-          <img src="https://flagcdn.com/w80/gb.png" alt="English">
-        </button>
-        <button id="btn-fr" class="lang-btn flag-btn" data-lang="fr" aria-label="Français" title="Français">
-          <img src="https://flagcdn.com/w80/fr.png" alt="Français">
-        </button>
-        <button id="btn-de" class="lang-btn flag-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">
-          <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
-        </button>
+    <div class="lang-switch" role="tablist" aria-label="Language selector">
+      <button id="btn-it" class="flag-btn" onclick="setLanguage('it')" aria-label="Italiano" title="Italiano">
+        <img src="https://flagcdn.com/w80/it.png" alt="Italiano">
+      </button>
+      <button id="btn-en" class="flag-btn" onclick="setLanguage('en')" aria-label="English" title="English">
+        <img src="https://flagcdn.com/w80/gb.png" alt="English">
+      </button>
+      <button id="btn-fr" class="flag-btn" onclick="setLanguage('fr')" aria-label="Français" title="Français">
+        <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+      </button>
+      <button id="btn-de" class="flag-btn" onclick="setLanguage('de')" aria-label="Deutsch" title="Deutsch">
+        <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="hero-image">
+        <img src="../immagini/camere/camera1-1.jpg" alt="Camere di Affittacamere L'Abrì a Pietraporzio">
       </div>
-    </header>
 
-    <main>
-      <section class="card">
-        <div class="cover">
-          <img src="../insegna.jpg" alt="Camere di Affittacamere L'Abrì a Pietraporzio">
-        </div>
+      <div class="inner">
 
-        <div class="intro-content lang-content" data-lang-content="it">
-          <h2 class="page-title">Le nostre camere</h2>
-          <p class="page-text">
+        <div class="lang-block lang-it">
+          <div class="intro">
             Scopri le nostre 5 camere ad Affittacamere L'Abrì. Ogni camera è pensata per offrire un soggiorno accogliente e rilassante nel cuore della Valle Stura.
-          </p>
+          </div>
+
+          <div class="room">
+            <h2>Camera 1</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera1-1.jpg" alt="Camera 1 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera1-2.jpg" alt="Camera 1 - seconda foto">
+            </div>
+            <p>Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+            <a class="room-link room-link-1" href="camera1.html?lang=it">Vedi dettagli</a>
+          </div>
+
+          <div class="room">
+            <h2>Camera 2</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera2-1.jpg" alt="Camera 2 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera2-2.jpg" alt="Camera 2 - seconda foto">
+            </div>
+            <p>Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+            <a class="room-link room-link-2" href="camera2.html?lang=it">Vedi dettagli</a>
+          </div>
+
+          <div class="room">
+            <h2>Camera 3</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera3-1.jpg" alt="Camera 3 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera3-2.jpg" alt="Camera 3 - seconda foto">
+            </div>
+            <p>Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+            <a class="room-link room-link-3" href="camera3.html?lang=it">Vedi dettagli</a>
+          </div>
+
+          <div class="room">
+            <h2>Camera 4</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera4-1.jpg" alt="Camera 4 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera4-2.jpg" alt="Camera 4 - seconda foto">
+            </div>
+            <p>Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+            <a class="room-link room-link-4" href="camera4.html?lang=it">Vedi dettagli</a>
+          </div>
+
+          <div class="room">
+            <h2>Camera 5</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera5-1.jpg" alt="Camera 5 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera5-2.jpg" alt="Camera 5 - seconda foto">
+            </div>
+            <p>Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
+            <a class="room-link room-link-5" href="camera5.html?lang=it">Vedi dettagli</a>
+          </div>
         </div>
 
-        <div class="intro-content lang-content hidden" data-lang-content="en">
-          <h2 class="page-title">Our rooms</h2>
-          <p class="page-text">
+        <div class="lang-block lang-en">
+          <div class="intro">
             Discover our 5 rooms at Affittacamere L'Abrì. Each room is designed to offer a welcoming and relaxing stay in the heart of Valle Stura.
-          </p>
+          </div>
+
+          <div class="room">
+            <h2>Room 1</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera1-1.jpg" alt="Room 1 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera1-2.jpg" alt="Room 1 - second photo">
+            </div>
+            <p>Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+            <a class="room-link room-link-1" href="camera1.html?lang=en">View details</a>
+          </div>
+
+          <div class="room">
+            <h2>Room 2</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera2-1.jpg" alt="Room 2 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera2-2.jpg" alt="Room 2 - second photo">
+            </div>
+            <p>Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+            <a class="room-link room-link-2" href="camera2.html?lang=en">View details</a>
+          </div>
+
+          <div class="room">
+            <h2>Room 3</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera3-1.jpg" alt="Room 3 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera3-2.jpg" alt="Room 3 - second photo">
+            </div>
+            <p>Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+            <a class="room-link room-link-3" href="camera3.html?lang=en">View details</a>
+          </div>
+
+          <div class="room">
+            <h2>Room 4</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera4-1.jpg" alt="Room 4 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera4-2.jpg" alt="Room 4 - second photo">
+            </div>
+            <p>Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+            <a class="room-link room-link-4" href="camera4.html?lang=en">View details</a>
+          </div>
+
+          <div class="room">
+            <h2>Room 5</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera5-1.jpg" alt="Room 5 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera5-2.jpg" alt="Room 5 - second photo">
+            </div>
+            <p>Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
+            <a class="room-link room-link-5" href="camera5.html?lang=en">View details</a>
+          </div>
         </div>
 
-        <div class="intro-content lang-content hidden" data-lang-content="fr">
-          <h2 class="page-title">Nos chambres</h2>
-          <p class="page-text">
+        <div class="lang-block lang-fr">
+          <div class="intro">
             Découvrez nos 5 chambres à Affittacamere L'Abrì. Chaque chambre est pensée pour offrir un séjour chaleureux et relaxant au cœur de la Valle Stura.
-          </p>
+          </div>
+
+          <div class="room">
+            <h2>Chambre 1</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera1-1.jpg" alt="Chambre 1 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera1-2.jpg" alt="Chambre 1 - deuxième photo">
+            </div>
+            <p>Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+            <a class="room-link room-link-1" href="camera1.html?lang=fr">Voir les détails</a>
+          </div>
+
+          <div class="room">
+            <h2>Chambre 2</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera2-1.jpg" alt="Chambre 2 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera2-2.jpg" alt="Chambre 2 - deuxième photo">
+            </div>
+            <p>Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+            <a class="room-link room-link-2" href="camera2.html?lang=fr">Voir les détails</a>
+          </div>
+
+          <div class="room">
+            <h2>Chambre 3</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera3-1.jpg" alt="Chambre 3 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera3-2.jpg" alt="Chambre 3 - deuxième photo">
+            </div>
+            <p>Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+            <a class="room-link room-link-3" href="camera3.html?lang=fr">Voir les détails</a>
+          </div>
+
+          <div class="room">
+            <h2>Chambre 4</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera4-1.jpg" alt="Chambre 4 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera4-2.jpg" alt="Chambre 4 - deuxième photo">
+            </div>
+            <p>Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+            <a class="room-link room-link-4" href="camera4.html?lang=fr">Voir les détails</a>
+          </div>
+
+          <div class="room">
+            <h2>Chambre 5</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera5-1.jpg" alt="Chambre 5 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera5-2.jpg" alt="Chambre 5 - deuxième photo">
+            </div>
+            <p>Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
+            <a class="room-link room-link-5" href="camera5.html?lang=fr">Voir les détails</a>
+          </div>
         </div>
 
-        <div class="intro-content lang-content hidden" data-lang-content="de">
-          <h2 class="page-title">Unsere Zimmer</h2>
-          <p class="page-text">
+        <div class="lang-block lang-de">
+          <div class="intro">
             Entdecken Sie unsere 5 Zimmer im Affittacamere L'Abrì. Jedes Zimmer ist darauf ausgelegt, einen gemütlichen und entspannenden Aufenthalt im Herzen des Valle Stura zu bieten.
-          </p>
-        </div>
-
-        <div class="room-card">
-          <h3 class="room-title" id="room1-title">Camera 1</h3>
-          <div class="room-gallery">
-            <img src="../immagini/camere/camera1-1.jpg" alt="Camera 1 - Affittacamere L'Abrì">
-            <img src="../immagini/camere/camera1-2.jpg" alt="Camera 1 - Affittacamere L'Abrì seconda foto">
           </div>
-          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
-          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
-          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
-          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
-          <div class="action-row">
-            <a class="action-btn btn-light" href="camera1.html?lang=it" id="room1-link">Vedi dettagli</a>
-          </div>
-        </div>
 
-        <div class="room-card">
-          <h3 class="room-title" id="room2-title">Camera 2</h3>
-          <div class="room-gallery">
-            <img src="../immagini/camere/camera2-1.jpg" alt="Camera 2 - Affittacamere L'Abrì">
-            <img src="../immagini/camere/camera2-2.jpg" alt="Camera 2 - Affittacamere L'Abrì seconda foto">
+          <div class="room">
+            <h2>Zimmer 1</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera1-1.jpg" alt="Zimmer 1 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera1-2.jpg" alt="Zimmer 1 - zweites Foto">
+            </div>
+            <p>Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
+            <a class="room-link room-link-1" href="camera1.html?lang=de">Details ansehen</a>
           </div>
-          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
-          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
-          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
-          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
-        </div>
 
-        <div class="room-card">
-          <h3 class="room-title" id="room3-title">Camera 3</h3>
-          <div class="room-gallery">
-            <img src="../immagini/camere/camera3-1.jpg" alt="Camera 3 - Affittacamere L'Abrì">
-            <img src="../immagini/camere/camera3-2.jpg" alt="Camera 3 - Affittacamere L'Abrì seconda foto">
+          <div class="room">
+            <h2>Zimmer 2</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera2-1.jpg" alt="Zimmer 2 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera2-2.jpg" alt="Zimmer 2 - zweites Foto">
+            </div>
+            <p>Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
+            <a class="room-link room-link-2" href="camera2.html?lang=de">Details ansehen</a>
           </div>
-          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
-          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
-          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
-          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
-        </div>
 
-        <div class="room-card">
-          <h3 class="room-title" id="room4-title">Camera 4</h3>
-          <div class="room-gallery">
-            <img src="../immagini/camere/camera4-1.jpg" alt="Camera 4 - Affittacamere L'Abrì">
-            <img src="../immagini/camere/camera4-2.jpg" alt="Camera 4 - Affittacamere L'Abrì seconda foto">
+          <div class="room">
+            <h2>Zimmer 3</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera3-1.jpg" alt="Zimmer 3 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera3-2.jpg" alt="Zimmer 3 - zweites Foto">
+            </div>
+            <p>Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
+            <a class="room-link room-link-3" href="camera3.html?lang=de">Details ansehen</a>
           </div>
-          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
-          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
-          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
-          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
-        </div>
 
-        <div class="room-card">
-          <h3 class="room-title" id="room5-title">Camera 5</h3>
-          <div class="room-gallery">
-            <img src="../immagini/camere/camera5-1.jpg" alt="Camera 5 - Affittacamere L'Abrì">
-            <img src="../immagini/camere/camera5-2.jpg" alt="Camera 5 - Affittacamere L'Abrì seconda foto">
+          <div class="room">
+            <h2>Zimmer 4</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera4-1.jpg" alt="Zimmer 4 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera4-2.jpg" alt="Zimmer 4 - zweites Foto">
+            </div>
+            <p>Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
+            <a class="room-link room-link-4" href="camera4.html?lang=de">Details ansehen</a>
           </div>
-          <p class="room-text lang-content" data-lang-content="it">Camera accogliente e luminosa, ideale per un soggiorno rilassante in Valle Stura. Descrizione provvisoria da personalizzare in seguito.</p>
-          <p class="room-text lang-content hidden" data-lang-content="en">Cozy and bright room, ideal for a relaxing stay in Valle Stura. Temporary description to be customized later.</p>
-          <p class="room-text lang-content hidden" data-lang-content="fr">Chambre chaleureuse et lumineuse, idéale pour un séjour relaxant dans la Valle Stura. Description provisoire à personnaliser plus tard.</p>
-          <p class="room-text lang-content hidden" data-lang-content="de">Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
-        </div>
 
-        <div class="intro-content">
-          <div class="action-row">
-            <a id="action-book" class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Prenota</a>
-            <a id="action-whatsapp" class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
-            <a id="action-home" class="action-btn btn-light" href="../index.html">Torna alla home</a>
+          <div class="room">
+            <h2>Zimmer 5</h2>
+            <div class="room-gallery">
+              <img src="../immagini/camere/camera5-1.jpg" alt="Zimmer 5 - Affittacamere L'Abrì">
+              <img src="../immagini/camere/camera5-2.jpg" alt="Zimmer 5 - zweites Foto">
+            </div>
+            <p>Gemütliches und helles Zimmer, ideal für einen entspannten Aufenthalt im Valle Stura. Vorläufige Beschreibung, später individuell anpassbar.</p>
+            <a class="room-link room-link-5" href="camera5.html?lang=de">Details ansehen</a>
           </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <div>Martini Emanuel - Affittacamere L'Abrì - CIN IT004167B4SR5N3EAA</div>
-    </footer>
+        <div class="actions">
+          <a id="action-home" class="btn-home" href="../index.html">🏠 Home</a>
+          <a id="action-book" class="btn-book" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener noreferrer">🛏️ Prenota</a>
+          <a id="action-whatsapp" class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
-    const buttons = document.querySelectorAll('[data-lang]');
-    const sections = document.querySelectorAll('[data-lang-content]');
+    const params = new URLSearchParams(window.location.search);
+    const initialLang = params.get('lang') || 'it';
 
     function setLanguage(lang) {
-      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
-      sections.forEach(section => {
-        section.classList.toggle('hidden', section.dataset.langContent !== lang);
+      document.querySelectorAll('.lang-block').forEach(block => {
+        block.classList.remove('active');
       });
-      document.documentElement.lang = lang;
 
-      const subtitles = {
-        it: 'Camere a Pietraporzio, Valle Stura',
-        en: 'Rooms in Pietraporzio, Valle Stura',
-        fr: 'Chambres à Pietraporzio, Vallée Stura',
-        de: 'Zimmer in Pietraporzio, Valle Stura'
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      const activeBlock = document.querySelector('.lang-' + lang);
+      const activeButton = document.getElementById('btn-' + lang);
+
+      if (activeBlock) activeBlock.classList.add('active');
+      if (activeButton) activeButton.classList.add('active');
+
+      const titles = {
+        it: 'Le nostre camere',
+        en: 'Our rooms',
+        fr: 'Nos chambres',
+        de: 'Unsere Zimmer'
       };
 
-      const actions = {
+      const actionLabels = {
         it: {
-          book: 'Prenota',
-          whatsapp: 'WhatsApp',
-          home: 'Torna alla home',
-          details: 'Vedi dettagli'
+          home: '🏠 Home',
+          book: '🛏️ Prenota',
+          whatsapp: '📲 WhatsApp'
         },
         en: {
-          book: 'Book now',
-          whatsapp: 'WhatsApp',
-          home: 'Back to home',
-          details: 'View details'
+          home: '🏠 Home',
+          book: '🛏️ Book now',
+          whatsapp: '📲 WhatsApp'
         },
         fr: {
-          book: 'Réserver',
-          whatsapp: 'WhatsApp',
-          home: "Retour à l’accueil",
-          details: 'Voir les détails'
+          home: '🏠 Accueil',
+          book: '🛏️ Réserver',
+          whatsapp: '📲 WhatsApp'
         },
         de: {
-          book: 'Buchen',
-          whatsapp: 'WhatsApp',
-          home: 'Zur Startseite',
-          details: 'Details ansehen'
+          home: '🏠 Startseite',
+          book: '🛏️ Buchen',
+          whatsapp: '📲 WhatsApp'
         }
       };
 
-      const roomTitles = {
-        it: ['Camera 1', 'Camera 2', 'Camera 3', 'Camera 4', 'Camera 5'],
-        en: ['Room 1', 'Room 2', 'Room 3', 'Room 4', 'Room 5'],
-        fr: ['Chambre 1', 'Chambre 2', 'Chambre 3', 'Chambre 4', 'Chambre 5'],
-        de: ['Zimmer 1', 'Zimmer 2', 'Zimmer 3', 'Zimmer 4', 'Zimmer 5']
-      };
+      document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
 
-      document.getElementById('page-subtitle').textContent = subtitles[lang] || subtitles.it;
-
-      const labels = actions[lang] || actions.it;
+      const labels = actionLabels[lang] || actionLabels.it;
+      document.getElementById('action-home').textContent = labels.home;
       document.getElementById('action-book').textContent = labels.book;
       document.getElementById('action-whatsapp').textContent = labels.whatsapp;
-      document.getElementById('action-home').textContent = labels.home;
-      document.getElementById('room1-link').textContent = labels.details;
-      document.getElementById('room1-link').href = 'camera1.html?lang=' + lang;
 
-      const titles = roomTitles[lang] || roomTitles.it;
-      document.getElementById('room1-title').textContent = titles[0];
-      document.getElementById('room2-title').textContent = titles[1];
-      document.getElementById('room3-title').textContent = titles[2];
-      document.getElementById('room4-title').textContent = titles[3];
-      document.getElementById('room5-title').textContent = titles[4];
+      document.querySelectorAll('.room-link-1').forEach(link => link.href = 'camera1.html?lang=' + lang);
+      document.querySelectorAll('.room-link-2').forEach(link => link.href = 'camera2.html?lang=' + lang);
+      document.querySelectorAll('.room-link-3').forEach(link => link.href = 'camera3.html?lang=' + lang);
+      document.querySelectorAll('.room-link-4').forEach(link => link.href = 'camera4.html?lang=' + lang);
+      document.querySelectorAll('.room-link-5').forEach(link => link.href = 'camera5.html?lang=' + lang);
+
+      const newUrl = new URL(window.location);
+      newUrl.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', newUrl);
     }
 
-    function getLangFromUrl() {
-      const params = new URLSearchParams(window.location.search);
-      const lang = params.get('lang');
-      if (['it', 'en', 'fr', 'de'].includes(lang)) return lang;
-      return 'it';
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        setLanguage(lang);
-        const url = new URL(window.location);
-        url.searchParams.set('lang', lang);
-        window.history.replaceState({}, '', url);
-      });
-    });
-
-    setLanguage(getLangFromUrl());
+    setLanguage(initialLang);
   </script>
 </body>
 </html>
+
+Se vuoi, nel prossimo passaggio ti preparo anche camera1.html perfettamente coerente con questa nuova pagina, già con le 4 lingue e i bottoni giusti.
