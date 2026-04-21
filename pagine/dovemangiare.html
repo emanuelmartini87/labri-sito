@@ -100,6 +100,7 @@
       gap: 12px;
       margin: 6px auto 12px;
       width: fit-content;
+      flex-wrap: wrap;
     }
 
     .lang-switch button {
@@ -273,6 +274,9 @@
       </button>
       <button id="btn-fr" class="flag-btn" onclick="setLanguage('fr')" aria-label="Français" title="Français">
         <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+      </button>
+      <button id="btn-de" class="flag-btn" onclick="setLanguage('de')" aria-label="Deutsch" title="Deutsch">
+        <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
       </button>
     </div>
 
@@ -585,10 +589,112 @@
         </div>
       </div>
 
+      <div class="lang-block lang-de">
+        <div class="intro">
+          Hier sind einige empfohlene Restaurants und Lokale in der Nähe von Affittacamere L'Abrì.
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Ortiche – Bergbistro</h2>
+          <p class="place-distance">📍 Pontebernardo – 100 Meter von uns entfernt</p>
+          <p>
+            Bergbistro mit lokaler okzitanischer Küche und regionalen Produkten.
+            Ideal für ein typisches Abendessen nur wenige Schritte von der Unterkunft entfernt.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ortiche+Bistrot+di+Montagna+Pontebernardo" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Centro Sentieri</h2>
+          <p class="place-distance">📍 Pietraporzio – 1 km von uns entfernt</p>
+          <p>
+            Restaurant und Herberge mitten in der Natur mit einfacher Bergküche.
+            Ideal für eine entspannte Pause oder ein ungezwungenes Abendessen.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Centro+Sentieri+Pietraporzio" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+
+        <div class="section">
+          <h2>🍽️ L’Oste d’Oc</h2>
+          <p class="place-distance">📍 Pietraporzio – 1 km von uns entfernt</p>
+          <p>
+            Traditionelle Bergtrattoria im Ortszentrum.
+            Sie bietet lokale Spezialitäten in einer einfachen und gemütlichen Atmosphäre.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=L%27Oste+d%27Oc+Pietraporzio" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Regina delle Alpi</h2>
+          <p class="place-distance">📍 Pietraporzio – 1 km von uns entfernt</p>
+          <p>
+            Restaurant des Hotels Regina delle Alpi mit traditioneller okzitanischer und alpiner Küche.
+            Ruhiges und gepflegtes Ambiente, ideal für Mittag- oder Abendessen.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Regina+delle+Alpi+Pietraporzio" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+
+        <div class="section">
+          <h2>🍽️ La Meridiana</h2>
+          <p class="place-distance">📍 Sambuco – 5 km von uns entfernt</p>
+          <p>
+            Traditionelles Restaurant mit hausgemachter Küche und Bergspezialitäten.
+            Gemütliche Atmosphäre mit Raclette und regionalen Produkten.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=La+Meridiana+Sambuco" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Ristorante della Pace</h2>
+          <p class="place-distance">📍 Sambuco – 5 km von uns entfernt</p>
+          <p>
+            Hotelrestaurant mit piemontesischer und alpiner Küche.
+            Gepflegte und einladende Atmosphäre, ideal für Mittag- und Abendessen mit lokalen Gerichten.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Albergo+della+Pace+Sambuco" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+
+        <div class="section">
+          <h2>🍽️ Trattoria da Mo</h2>
+          <p class="place-distance">📍 Bersezio – 5 km von uns entfernt</p>
+          <p>
+            Familiengeführte Trattoria mit okzitanischer und alpiner Küche.
+            Großzügige Portionen und authentische Gerichte in rustikalem Ambiente.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Trattoria+da+Mo+Bersezio" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+
+        <div class="section">
+          <h2>🍽️ La Locanda di Vinadio</h2>
+          <p class="place-distance">📍 Vinadio – 16 km von uns entfernt</p>
+          <p>
+            Restaurant, Pizzeria und Trattoria mit einfacher und schmackhafter Küche.
+            Große Auswahl an Gerichten und Pizzen, ideal für ein ungezwungenes Abendessen.
+          </p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=La+Locanda+di+Vinadio" target="_blank" rel="noopener noreferrer">
+            📍 In Google Maps öffnen
+          </a>
+        </div>
+      </div>
+
       <div class="actions">
-        <a class="btn-home" href="../index.html">🏠 Home</a>
+        <a id="action-home" class="btn-home" href="../index.html">🏠 Home</a>
         <a class="btn-accesso" id="accesso-link" href="accesso.html?lang=it">🔐 Istruzioni accesso</a>
-        <a class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
+        <a id="action-whatsapp" class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
       </div>
     </div>
   </div>
@@ -615,13 +721,34 @@
       const titles = {
         it: 'Dove mangiare',
         en: 'Where to eat',
-        fr: 'Où manger'
+        fr: 'Où manger',
+        de: 'Wo man essen kann'
       };
 
       const accessoLabels = {
         it: '🔐 Istruzioni accesso',
         en: '🔐 Access instructions',
-        fr: "🔐 Instructions d'accès"
+        fr: "🔐 Instructions d'accès",
+        de: '🔐 Zugangsanleitung'
+      };
+
+      const actionLabels = {
+        it: {
+          home: '🏠 Home',
+          whatsapp: '📲 WhatsApp'
+        },
+        en: {
+          home: '🏠 Home',
+          whatsapp: '📲 WhatsApp'
+        },
+        fr: {
+          home: '🏠 Accueil',
+          whatsapp: '📲 WhatsApp'
+        },
+        de: {
+          home: '🏠 Startseite',
+          whatsapp: '📲 WhatsApp'
+        }
       };
 
       document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
@@ -629,6 +756,10 @@
       const accessoLink = document.getElementById('accesso-link');
       accessoLink.href = 'accesso.html?lang=' + lang;
       accessoLink.textContent = accessoLabels[lang] || accessoLabels.it;
+
+      const labels = actionLabels[lang] || actionLabels.it;
+      document.getElementById('action-home').textContent = labels.home;
+      document.getElementById('action-whatsapp').textContent = labels.whatsapp;
 
       const newUrl = new URL(window.location);
       newUrl.searchParams.set('lang', lang);
