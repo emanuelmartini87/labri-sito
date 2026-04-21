@@ -150,6 +150,7 @@
       gap: 12px;
       margin: 6px auto 12px;
       width: fit-content;
+      flex-wrap: wrap;
     }
 
     .lang-btn {
@@ -447,6 +448,9 @@
         <button class="lang-btn flag-btn" data-lang="fr" aria-label="Français" title="Français">
           <img src="https://flagcdn.com/w80/fr.png" alt="Français">
         </button>
+        <button class="lang-btn flag-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">
+          <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
+        </button>
       </div>
     </header>
 
@@ -489,12 +493,26 @@
           <div class="action-grid">
             <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
             <a class="action-btn btn-blue" href="https://www.ilmeteo.it/webcam/Pietraporzio" target="_blank" rel="noopener">Webcam</a>
-            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Reserver</a>
+            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Réserver</a>
             <a class="action-btn btn-purple" href="https://host.mymaisonapp.com/public/t/iv-FAU1g3WYx-WOwMKs2Mg/check_in?include_rental=true" target="_blank" rel="noopener">Check-in en ligne</a>
-            <a class="action-btn btn-red" href="pagine/accesso.html?lang=fr">Instructions d'acces</a>
+            <a class="action-btn btn-red" href="pagine/accesso.html?lang=fr">Instructions d'accès</a>
             <a class="action-btn btn-yellow" href="https://www.google.com/maps/search/?api=1&query=Affittacamere+L+Abri+Pietraporzio" target="_blank" rel="noopener">Où sommes-nous</a>
             <a class="action-btn btn-celeste" href="pagine/dovemangiare.html?lang=fr">Où manger</a>
             <a class="action-btn btn-blue" href="pagine/camere.html?lang=fr">Chambres</a>
+          </div>
+        </div>
+
+        <div class="welcome-body lang-content hidden" data-lang-content="de">
+          <h2 class="welcome-title">Willkommen im Affittacamere L'Abrì</h2>
+          <div class="action-grid">
+            <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="action-btn btn-blue" href="https://www.ilmeteo.it/webcam/Pietraporzio" target="_blank" rel="noopener">Webcam</a>
+            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Buchen</a>
+            <a class="action-btn btn-purple" href="https://host.mymaisonapp.com/public/t/iv-FAU1g3WYx-WOwMKs2Mg/check_in?include_rental=true" target="_blank" rel="noopener">Online-Check-in</a>
+            <a class="action-btn btn-red" href="pagine/accesso.html?lang=de">Zugangsanleitung</a>
+            <a class="action-btn btn-yellow" href="https://www.google.com/maps/search/?api=1&query=Affittacamere+L+Abri+Pietraporzio" target="_blank" rel="noopener">Wo wir sind</a>
+            <a class="action-btn btn-celeste" href="pagine/dovemangiare.html?lang=de">Wo man essen kann</a>
+            <a class="action-btn btn-blue" href="pagine/camere.html?lang=de">Zimmer</a>
           </div>
         </div>
       </section>
@@ -523,6 +541,14 @@
         </p>
       </section>
 
+      <section class="card lang-content hidden seo-hidden" data-lang-content="de">
+        <h2 class="section-title">Labri – Affittacamere L'Abrì in Pietraporzio</h2>
+        <p class="section-copy">
+          Labri ist die offizielle Website von Affittacamere L'Abrì in Pietraporzio, im Herzen des Valle Stura.
+          Wir bieten gemütliche Zimmer für einen Aufenthalt in den Bergen, mit eigenständigem Check-in, kostenlosem WLAN und nützlichen Informationen für Ihren Besuch.
+        </p>
+      </section>
+
       <div class="mini-grid">
         <section class="card lang-content hidden" data-lang-content="it">
           <h3 class="section-title">Password Wi-Fi</h3>
@@ -543,6 +569,13 @@
           <p class="section-copy">Le mot de passe Wi-Fi du jour est :</p>
           <div class="wifi-password" data-wifi-password>Chargement...</div>
           <p class="wifi-note">Le mot de passe se met à jour automatiquement chaque jour.</p>
+        </section>
+
+        <section class="card lang-content hidden" data-lang-content="de">
+          <h3 class="section-title">WLAN-Passwort</h3>
+          <p class="section-copy">Das heutige WLAN-Passwort lautet:</p>
+          <div class="wifi-password" data-wifi-password>Lädt...</div>
+          <p class="wifi-note">Das Passwort wird jeden Tag automatisch aktualisiert.</p>
         </section>
 
         <section class="card lang-content hidden" data-lang-content="it">
@@ -586,16 +619,33 @@
             Utilisez uniquement des chiffres, sans espaces.
           </div>
         </section>
+
+        <section class="card lang-content hidden" data-lang-content="de">
+          <h3 class="section-title">Online-Check-in erforderlich</h3>
+          <p class="section-copy">Bitte füllen Sie den Online-Check-in vor Ihrer Ankunft aus.</p>
+          <div class="code-box">
+            <strong>Bestätigungscode:</strong><br>
+            Geben Sie die letzten 4 Ziffern Ihrer Telefonnummer gefolgt von Ihrem Check-in-Datum (TTMMJJ) ein.<br><br>
+            Beispiel:<br>
+            Telefonnummer 3335984119 - 4119<br>
+            Check-in-Datum 05/04/2026 - 050426<br>
+            Code - 4119050426<br><br>
+            Nur Zahlen verwenden, keine Leerzeichen.
+          </div>
+        </section>
       </div>
 
       <div class="notice lang-content hidden" data-lang-content="it">
         Check-in dalle 16:30 - Check-out entro le 10:30 - SITO IN COSTRUZIONE -
       </div>
       <div class="notice lang-content" data-lang-content="en">
-        Check-in from 4:30 PM - Check-out by 10:30 AM - SITO IN COSTRUZIONE -
+        Check-in from 4:30 PM - Check-out by 10:30 AM - SITE UNDER CONSTRUCTION -
       </div>
       <div class="notice lang-content hidden" data-lang-content="fr">
-        Check-in à partir de 16h30 - Check-out avant 10h30 - SITO IN COSTRUZIONE -
+        Check-in à partir de 16h30 - Check-out avant 10h30 - SITE EN CONSTRUCTION -
+      </div>
+      <div class="notice lang-content hidden" data-lang-content="de">
+        Check-in ab 16:30 Uhr - Check-out bis 10:30 Uhr - WEBSITE IM AUFBAU -
       </div>
     </main>
 
