@@ -97,6 +97,7 @@
       gap: 12px;
       margin: 6px auto 12px;
       width: fit-content;
+      flex-wrap: wrap;
     }
 
     .lang-switch button {
@@ -266,6 +267,9 @@
       </button>
       <button id="btn-fr" class="flag-btn" onclick="setLanguage('fr')" aria-label="Français" title="Français">
         <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+      </button>
+      <button id="btn-de" class="flag-btn" onclick="setLanguage('de')" aria-label="Deutsch" title="Deutsch">
+        <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
       </button>
     </div>
 
@@ -460,10 +464,73 @@
         </div>
       </div>
 
+      <div class="lang-block lang-de">
+        <div class="intro">
+          Der Zugang zur Unterkunft ist vollständig selbstständig möglich.
+        </div>
+
+        <div class="section">
+          <h2>🔐 Zugang</h2>
+          <p>Die Haupteingangstür wird mit einem Code geöffnet. Nach Eingabe des Codes drücken Sie die Yale-Taste. Es ist nicht notwendig, die Klinke zu drücken: die Tür öffnet sich automatisch.</p>
+        </div>
+
+        <div class="section">
+          <h2>🏠 Unterkunft</h2>
+          <p>Im ersten Stock befinden sich der Frühstücksraum sowie die Zimmer 1, 2 und 3. Im zweiten Stock, der von außen über den Gehweg erreichbar ist, befinden sich die Zimmer 4 und 5.</p>
+        </div>
+
+        <div class="section">
+          <h2>🔑 Zimmer</h2>
+          <p>Ihre Zimmernummer und Ihr Zugangscode werden Ihnen vor Ihrer Ankunft mitgeteilt. Die Zimmerschlüssel hängen im Frühstücksraum hinter der Kaffeemaschine.</p>
+        </div>
+
+        <div class="section">
+          <h2>☕ Frühstück</h2>
+          <p>Der Frühstücksraum wird gemeinschaftlich genutzt und muss bis 19:00 Uhr frei sein. Das Frühstück wird am Abend vorbereitet und steht morgens zur selbstständigen Nutzung bereit.</p>
+        </div>
+
+        <div class="section">
+          <h2>🚗 Garage</h2>
+          <p>Verfügbar für Motorräder und Fahrräder. Sie lässt sich öffnen:</p>
+          <ul>
+            <li>vom Frühstücksraum aus über den Knopf vor dem Tisch</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>🔔 Hilfe</h2>
+          <p>Bei Bedarf können Sie an der Klingel vor dem Haupteingang läuten. Wir stehen Ihnen selbstverständlich auch persönlich zur Verfügung.</p>
+        </div>
+
+        <div class="section">
+          <h2>🚪 Check-out</h2>
+          <p>Bitte lassen Sie die Schlüssel bei der Abreise außen an der Zimmertür.</p>
+        </div>
+
+        <div class="section">
+          <h2>⏰ Zeiten</h2>
+          <p>Check-in ab 16:30 Uhr<br>Check-out bis 10:30 Uhr</p>
+        </div>
+
+        <div class="highlight">
+          <h3>📋 Online-Check-in erforderlich</h3>
+          <p>Bitte füllen Sie den Check-in über den folgenden Link aus:</p>
+          <div class="code-box">https://host.mymaisonapp.com/public/t/iv-FAU1g3WYx-WOwMKs2Mg/check_in?include_rental=true</div>
+          <p><strong>Bestätigungscode:</strong><br>Geben Sie die letzten 4 Ziffern Ihrer Telefonnummer gefolgt von Ihrem Check-in-Datum (TTMMJJ) ein.</p>
+          <p>Beispiel:<br>Telefonnummer 3335984119 → 4119<br>Check-in 05/04/2026 → 050426</p>
+          <div class="code-box">Code: 4119050426</div>
+          <p>Nur Zahlen verwenden, ohne Leerzeichen.</p>
+        </div>
+
+        <div class="section">
+          <p>Mit freundlichen Grüßen<br><strong>Martini Emanuel</strong><br>Affittacamere L'Abrì</p>
+        </div>
+      </div>
+
       <div class="actions">
-        <a class="btn-home" href="../index.html">🏠 Home</a>
-        <a class="btn-checkin" href="https://host.mymaisonapp.com/public/t/iv-FAU1g3WYx-WOwMKs2Mg/check_in?include_rental=true" target="_blank" rel="noopener noreferrer">📋 Online check-in</a>
-        <a class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
+        <a id="action-home" class="btn-home" href="../index.html">🏠 Home</a>
+        <a id="action-checkin" class="btn-checkin" href="https://host.mymaisonapp.com/public/t/iv-FAU1g3WYx-WOwMKs2Mg/check_in?include_rental=true" target="_blank" rel="noopener noreferrer">📋 Check-in online</a>
+        <a id="action-whatsapp" class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
       </div>
     </div>
   </div>
@@ -490,10 +557,39 @@
       const titles = {
         it: 'Istruzioni accesso',
         en: 'Access instructions',
-        fr: "Instructions d'accès"
+        fr: "Instructions d'accès",
+        de: 'Zugangsanleitung'
+      };
+
+      const actionLabels = {
+        it: {
+          home: '🏠 Home',
+          checkin: '📋 Check-in online',
+          whatsapp: '📲 WhatsApp'
+        },
+        en: {
+          home: '🏠 Home',
+          checkin: '📋 Online check-in',
+          whatsapp: '📲 WhatsApp'
+        },
+        fr: {
+          home: '🏠 Accueil',
+          checkin: '📋 Check-in en ligne',
+          whatsapp: '📲 WhatsApp'
+        },
+        de: {
+          home: '🏠 Startseite',
+          checkin: '📋 Online-Check-in',
+          whatsapp: '📲 WhatsApp'
+        }
       };
 
       document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
+
+      const labels = actionLabels[lang] || actionLabels.it;
+      document.getElementById('action-home').textContent = labels.home;
+      document.getElementById('action-checkin').textContent = labels.checkin;
+      document.getElementById('action-whatsapp').textContent = labels.whatsapp;
 
       const newUrl = new URL(window.location);
       newUrl.searchParams.set('lang', lang);
