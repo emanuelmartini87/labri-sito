@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Camere – Affittacamere L'Abrì | Pietraporzio, Valle Stura</title>
+  <meta name="description" content="Scopri presto la sezione camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura. Pagina in aggiornamento.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#324b63">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Camere – Affittacamere L'Abrì">
+  <meta property="og:description" content="La pagina dedicata alle camere è attualmente in preparazione.">
+  <meta property="og:url" content="https://www.labri.it/pagine/camere.html">
+  <meta property="og:site_name" content="Labri – Affittacamere L'Abrì">
+  <meta property="og:image" content="https://www.labri.it/insegna.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Camere – Affittacamere L'Abrì">
+  <meta name="twitter:description" content="La pagina dedicata alle camere è attualmente in preparazione.">
+  <meta name="twitter:image" content="https://www.labri.it/insegna.jpg">
+
+  <link rel="canonical" href="https://www.labri.it/pagine/camere.html">
+  <link rel="icon" href="https://www.labri.it/insegna.jpg">
+
+  <style>
+    :root {
+      --bg1: #324b63;
+      --bg2: #66707d;
+      --card: rgba(247, 241, 232, 0.97);
+      --text: #31251d;
+      --muted: #6d6258;
+
+      --wood: #8a5b3d;
+      --wood-dark: #6f472f;
+      --forest: #55684d;
+      --rust: #b46e45;
+      --stone: #ded4c8;
+      --cream: #f7f1e8;
+      --gold: #c7a671;
+
+      --green: #55684d;
+      --blue: #3f5f7a;
+      --orange: #b46e45;
+
+      --shadow: 0 16px 38px rgba(0,0,0,.15);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 860px;
+      padding: 22px 18px 44px;
+    }
+
+    .hero {
+      color: #fff;
+      text-align: center;
+      padding: 18px 8px 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      text-shadow: 0 2px 10px rgba(0,0,0,.14);
+    }
+
+    .subtitle {
+      margin: 8px 0 4px;
+      font-size: 1.15rem;
+      opacity: .95;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 10px auto 14px;
+      width: fit-content;
+    }
+
+    .lang-btn {
+      border: 0;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+      background: transparent;
+      padding: 0;
+    }
+
+    .lang-btn:hover {
+      transform: translateY(-1px) scale(1.04);
+    }
+
+    .flag-btn {
+      width: 54px;
+      height: 54px;
+      padding: 4px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      box-shadow: 0 6px 16px rgba(0,0,0,.16);
+    }
+
+    .flag-btn img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .flag-btn.active {
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,.96),
+        0 0 0 6px rgba(199,166,113,.30),
+        0 8px 20px rgba(0,0,0,.18);
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(247,241,232,0.98), rgba(241,234,224,0.96));
+      border-radius: var(--radius);
+      padding: 0;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+      border: 1px solid rgba(111,71,47,.12);
+      overflow: hidden;
+    }
+
+    .cover img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      background: #d8d2c7;
+    }
+
+    .content {
+      padding: 26px 20px 24px;
+    }
+
+    .page-title {
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      line-height: 1.15;
+    }
+
+    .page-text {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1.04rem;
+    }
+
+    .notice-box {
+      background: #f3ede5;
+      border: 1px solid rgba(111,71,47,.10);
+      border-radius: 18px;
+      padding: 18px 16px;
+      color: var(--wood-dark);
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      padding: 12px 18px;
+      border: 2px solid rgba(111,71,47,.16);
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    }
+
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+    }
+
+    .btn-orange {
+      background: linear-gradient(180deg, #b46e45, #9f5f3a);
+      color: #fff;
+      border-color: rgba(255,255,255,.10);
+    }
+
+    .btn-green {
+      background: linear-gradient(180deg, #55684d, #46563f);
+      color: #fff;
+      border-color: rgba(255,255,255,.10);
+    }
+
+    .btn-light {
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(245,239,231,.95));
+      color: var(--text);
+    }
+
+    .footer {
+      text-align: center;
+      color: rgba(255,255,255,.92);
+      padding-top: 10px;
+      font-size: .98rem;
+      line-height: 1.7;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 719px) {
+      .cover img {
+        height: 240px;
+      }
+
+      .flag-btn {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>Affittacamere L'Abrì</h1>
+      <p class="subtitle">Camere a Pietraporzio, Valle Stura</p>
+
+      <div class="lang-switch" role="tablist" aria-label="Language selector">
+        <button class="lang-btn flag-btn active" data-lang="it" aria-label="Italiano" title="Italiano">
+          <img src="https://flagcdn.com/w80/it.png" alt="Italiano">
+        </button>
+        <button class="lang-btn flag-btn" data-lang="en" aria-label="English" title="English">
+          <img src="https://flagcdn.com/w80/gb.png" alt="English">
+        </button>
+        <button class="lang-btn flag-btn" data-lang="fr" aria-label="Français" title="Français">
+          <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="cover">
+          <img src="../insegna.jpg" alt="Camere di Affittacamere L'Abrì a Pietraporzio">
+        </div>
+
+        <div class="content lang-content" data-lang-content="it">
+          <h2 class="page-title">Camere</h2>
+          <p class="page-text">
+            La pagina dedicata alle nostre camere è attualmente in preparazione.
+            Stiamo lavorando per inserire foto, descrizioni e dettagli delle 5 camere di Affittacamere L'Abrì.
+          </p>
+          <div class="notice-box">
+            Pagina in costruzione<br>
+            Tornate presto per scoprire tutte le camere disponibili.
+          </div>
+          <div class="action-row">
+            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Prenota</a>
+            <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="action-btn btn-light" href="../index.html">Torna alla home</a>
+          </div>
+        </div>
+
+        <div class="content lang-content hidden" data-lang-content="en">
+          <h2 class="page-title">Rooms</h2>
+          <p class="page-text">
+            The page dedicated to our rooms is currently being prepared.
+            We are working on adding photos, descriptions and details of the 5 rooms at Affittacamere L'Abrì.
+          </p>
+          <div class="notice-box">
+            Page under construction<br>
+            Please come back soon to discover all available rooms.
+          </div>
+          <div class="action-row">
+            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Book now</a>
+            <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="action-btn btn-light" href="../index.html">Back to home</a>
+          </div>
+        </div>
+
+        <div class="content lang-content hidden" data-lang-content="fr">
+          <h2 class="page-title">Chambres</h2>
+          <p class="page-text">
+            La page dédiée à nos chambres est actuellement en préparation.
+            Nous travaillons à ajouter les photos, descriptions et détails des 5 chambres de Affittacamere L'Abrì.
+          </p>
+          <div class="notice-box">
+            Page en construction<br>
+            Revenez bientôt pour découvrir toutes les chambres disponibles.
+          </div>
+          <div class="action-row">
+            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Réserver</a>
+            <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="action-btn btn-light" href="../index.html">Retour à l’accueil</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>Martini Emanuel - Affittacamere L'Abrì - CIN IT004167B4SR5N3EAA</div>
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-lang]');
+    const sections = document.querySelectorAll('[data-lang-content]');
+
+    function setLanguage(lang) {
+      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+      sections.forEach(section => {
+        section.classList.toggle('hidden', section.dataset.langContent !== lang);
+      });
+      document.documentElement.lang = lang;
+    }
+
+    function getLangFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const lang = params.get('lang');
+      if (['it', 'en', 'fr'].includes(lang)) return lang;
+      return 'it';
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        setLanguage(lang);
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url);
+      });
+    });
+
+    setLanguage(getLangFromUrl());
+  </script>
+</body>
+</html>
