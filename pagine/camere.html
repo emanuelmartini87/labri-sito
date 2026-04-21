@@ -8,6 +8,7 @@
   <meta name="description" content="Scopri presto la sezione camere di Affittacamere L'Abrì a Pietraporzio, in Valle Stura. Pagina in aggiornamento.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#324b63">
+  <meta http-equiv="content-language" content="it">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
@@ -77,14 +78,15 @@
       padding: 18px 8px 10px;
     }
 
-    h1 {
+    .hero h1 {
       margin: 0;
       font-size: clamp(2rem, 5vw, 3rem);
       line-height: 1.05;
+      letter-spacing: .2px;
       text-shadow: 0 2px 10px rgba(0,0,0,.14);
     }
 
-    .subtitle {
+    .hero p {
       margin: 8px 0 4px;
       font-size: 1.15rem;
       opacity: .95;
@@ -97,6 +99,7 @@
       gap: 12px;
       margin: 10px auto 14px;
       width: fit-content;
+      flex-wrap: wrap;
     }
 
     .lang-btn {
@@ -187,6 +190,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 4px;
     }
 
     .action-btn {
@@ -202,6 +206,7 @@
       padding: 12px 18px;
       border: 2px solid rgba(111,71,47,.16);
       box-shadow: 0 8px 18px rgba(0,0,0,.10);
+      text-align: center;
     }
 
     .action-btn:hover {
@@ -247,6 +252,10 @@
         width: 48px;
         height: 48px;
       }
+
+      .action-btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -254,17 +263,20 @@
   <div class="page">
     <header class="hero">
       <h1>Affittacamere L'Abrì</h1>
-      <p class="subtitle">Camere a Pietraporzio, Valle Stura</p>
+      <p id="page-subtitle">Camere a Pietraporzio, Valle Stura</p>
 
       <div class="lang-switch" role="tablist" aria-label="Language selector">
-        <button class="lang-btn flag-btn active" data-lang="it" aria-label="Italiano" title="Italiano">
+        <button id="btn-it" class="lang-btn flag-btn" data-lang="it" aria-label="Italiano" title="Italiano">
           <img src="https://flagcdn.com/w80/it.png" alt="Italiano">
         </button>
-        <button class="lang-btn flag-btn" data-lang="en" aria-label="English" title="English">
+        <button id="btn-en" class="lang-btn flag-btn" data-lang="en" aria-label="English" title="English">
           <img src="https://flagcdn.com/w80/gb.png" alt="English">
         </button>
-        <button class="lang-btn flag-btn" data-lang="fr" aria-label="Français" title="Français">
+        <button id="btn-fr" class="lang-btn flag-btn" data-lang="fr" aria-label="Français" title="Français">
           <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+        </button>
+        <button id="btn-de" class="lang-btn flag-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">
+          <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
         </button>
       </div>
     </header>
@@ -279,16 +291,11 @@
           <h2 class="page-title">Camere</h2>
           <p class="page-text">
             La pagina dedicata alle nostre camere è attualmente in preparazione.
-            Stiamo lavorando per inserire foto, descrizioni e dettagli delle 5 camere di Affittacamere L'Abrì.
+            Stiamo lavorando per aggiungere foto, descrizioni e dettagli delle 5 camere di Affittacamere L'Abrì.
           </p>
           <div class="notice-box">
-            Pagina in costruzione<br>
+            Pagina in costruzione.<br>
             Tornate presto per scoprire tutte le camere disponibili.
-          </div>
-          <div class="action-row">
-            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Prenota</a>
-            <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="action-btn btn-light" href="../index.html">Torna alla home</a>
           </div>
         </div>
 
@@ -299,13 +306,8 @@
             We are working on adding photos, descriptions and details of the 5 rooms at Affittacamere L'Abrì.
           </p>
           <div class="notice-box">
-            Page under construction<br>
+            Page under construction.<br>
             Please come back soon to discover all available rooms.
-          </div>
-          <div class="action-row">
-            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Book now</a>
-            <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="action-btn btn-light" href="../index.html">Back to home</a>
           </div>
         </div>
 
@@ -316,13 +318,28 @@
             Nous travaillons à ajouter les photos, descriptions et détails des 5 chambres de Affittacamere L'Abrì.
           </p>
           <div class="notice-box">
-            Page en construction<br>
+            Page en construction.<br>
             Revenez bientôt pour découvrir toutes les chambres disponibles.
           </div>
+        </div>
+
+        <div class="content lang-content hidden" data-lang-content="de">
+          <h2 class="page-title">Zimmer</h2>
+          <p class="page-text">
+            Die Seite mit unseren Zimmern befindet sich derzeit in Vorbereitung.
+            Wir arbeiten daran, Fotos, Beschreibungen und Details der 5 Zimmer von Affittacamere L'Abrì hinzuzufügen.
+          </p>
+          <div class="notice-box">
+            Seite im Aufbau.<br>
+            Schauen Sie bald wieder vorbei, um alle verfügbaren Zimmer zu entdecken.
+          </div>
+        </div>
+
+        <div class="content">
           <div class="action-row">
-            <a class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Réserver</a>
-            <a class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
-            <a class="action-btn btn-light" href="../index.html">Retour à l’accueil</a>
+            <a id="action-book" class="action-btn btn-orange" href="https://labriprenotazioni.bed-booking.com/" target="_blank" rel="noopener">Prenota</a>
+            <a id="action-whatsapp" class="action-btn btn-green" href="https://wa.me/393335984119" target="_blank" rel="noopener">WhatsApp</a>
+            <a id="action-home" class="action-btn btn-light" href="../index.html">Torna alla home</a>
           </div>
         </div>
       </section>
@@ -343,12 +360,49 @@
         section.classList.toggle('hidden', section.dataset.langContent !== lang);
       });
       document.documentElement.lang = lang;
+
+      const subtitles = {
+        it: 'Camere a Pietraporzio, Valle Stura',
+        en: 'Rooms in Pietraporzio, Valle Stura',
+        fr: 'Chambres à Pietraporzio, Vallée Stura',
+        de: 'Zimmer in Pietraporzio, Valle Stura'
+      };
+
+      const actions = {
+        it: {
+          book: 'Prenota',
+          whatsapp: 'WhatsApp',
+          home: 'Torna alla home'
+        },
+        en: {
+          book: 'Book now',
+          whatsapp: 'WhatsApp',
+          home: 'Back to home'
+        },
+        fr: {
+          book: 'Réserver',
+          whatsapp: 'WhatsApp',
+          home: "Retour à l’accueil"
+        },
+        de: {
+          book: 'Buchen',
+          whatsapp: 'WhatsApp',
+          home: 'Zur Startseite'
+        }
+      };
+
+      document.getElementById('page-subtitle').textContent = subtitles[lang] || subtitles.it;
+
+      const labels = actions[lang] || actions.it;
+      document.getElementById('action-book').textContent = labels.book;
+      document.getElementById('action-whatsapp').textContent = labels.whatsapp;
+      document.getElementById('action-home').textContent = labels.home;
     }
 
     function getLangFromUrl() {
       const params = new URLSearchParams(window.location.search);
       const lang = params.get('lang');
-      if (['it', 'en', 'fr'].includes(lang)) return lang;
+      if (['it', 'en', 'fr', 'de'].includes(lang)) return lang;
       return 'it';
     }
 
