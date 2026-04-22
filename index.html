@@ -207,20 +207,14 @@
       position: relative;
       min-height: 200px;
       background: #d8d2c7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
     }
 
     .welcome-media img {
       width: 100%;
-      height: auto;
-      max-height: 560px;
-      object-fit: contain;
+      height: 340px;
+      object-fit: cover;
       object-position: center;
       display: block;
-      border-radius: 18px 18px 0 0;
     }
 
     .welcome-body {
@@ -391,8 +385,7 @@
 
     @media (max-width: 719px) {
       .welcome-media img {
-        height: auto;
-        max-height: 420px;
+        height: 260px;
       }
 
       .flag-btn {
