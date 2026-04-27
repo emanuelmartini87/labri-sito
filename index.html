@@ -708,8 +708,18 @@
       btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
 
-    updateWifiPassword();
-    setInterval(updateWifiPassword, 60000);
+const params = new URLSearchParams(window.location.search);
+const urlLang = params.get('lang');
+const supportedLangs = ['it', 'en', 'fr', 'de'];
+
+if (supportedLangs.includes(urlLang)) {
+  setLanguage(urlLang);
+} else {
+  setLanguage('it');
+}
+
+updateWifiPassword();
+setInterval(updateWifiPassword, 60000);
   </script>
 </body>
 </html>
