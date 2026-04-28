@@ -584,7 +584,8 @@
       </div>
     </div>
   </div>
-    <!-- FOOTER DENTRO WRAP -->
+
+  <!-- FOOTER DENTRO WRAP -->
   <footer class="footer-legal">
     <div>
       <strong>L'Abrì di Martini Emanuel</strong><br>
@@ -597,8 +598,6 @@
       <a href="/privacy-policy.html">Privacy Policy</a>
     </p>
   </footer>
-
-</div> <!-- CHIUSURA WRAP -->
 
   <script>
     const params = new URLSearchParams(window.location.search);
@@ -649,7 +648,7 @@
         }
       };
 
-            document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
+      document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
 
       const labels = actionLabels[lang] || actionLabels.it;
       document.getElementById('action-home').textContent = labels.home;
@@ -663,7 +662,6 @@
 
     setLanguage(initialLang);
   </script>
-</div> <!-- CHIUSURA WRAP -->
 
 </body>
 </html>
