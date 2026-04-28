@@ -712,25 +712,28 @@ const params = new URLSearchParams(window.location.search);
 const urlLang = params.get('lang');
 const supportedLangs = ['it', 'en', 'fr', 'de'];
 
-if (supportedLangs.includes(urlLang)) {
-  setLanguage(urlLang);
-} else {
-  setLanguage('it');
-}
+      if (supportedLangs.includes(urlLang)) {
+        setLanguage(urlLang);
+      } else {
+        setLanguage('it');
+      }
+      updateWifiPassword();
+      setInterval(updateWifiPassword, 60000);
+    </script>
 
-updateWifiPassword();
-setInterval(updateWifiPassword, 60000);
-  </script>
+    <!-- INIZIO FOOTER LEGALE -->
+    <footer style="text-align: center; padding: 40px 10px; color: #fff; font-size: 0.85rem; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); width: 100%;">
+      <p style="margin: 5px 0;">
+        <strong>L'Abrì di Martini Emanuel</strong><br>
+        Via Francia N 3, Fraz. Pontebernardo, 12010 Pietraporzio (CN)<br>
+        P.IVA: 03493740041
+      </p>
+      <p style="margin: 15px 0 0 0;">
+        <a href="/privacy-policy.html" style="color: #c7a671; text-decoration: none; font-weight: bold; border-bottom: 1px solid #c7a671;">Privacy Policy</a>
+      </p>
+    </footer>
+    <!-- FINE FOOTER LEGALE -->
 
-  <!-- Footer Legale -->
-  <footer style="text-align: center; padding: 60px 20px 40px; color: #fff; font-size: 0.85rem; opacity: 0.9; margin-top: 50px; width: 100%;">
-    <p><strong>L'Abrì di Martini Emanuel</strong><br>
-    Via Francia N 3, Fraz. Pontebernardo, 12010 Pietraporzio (CN)<br>
-    P.IVA: 03493740041</p>
-    <p style="margin-top: 10px;">
-      <a href="/privacy-policy.html" style="color: #c7a671; text-decoration: none; font-weight: bold; border-bottom: 1px solid #c7a671;">Privacy Policy</a>
-    </p>
-  </footer>
-
+  </div> <!-- Chiusura del div class="page" -->
 </body>
 </html>
