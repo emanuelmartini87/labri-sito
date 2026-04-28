@@ -84,25 +84,28 @@
 
     * { box-sizing: border-box; }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, var(--bg1), var(--bg2));
-      min-height: 100%;
-    }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  min-height: 100%;
+  height: 100%;
+}
 
-    body {
-      display: flex;
-      justify-content: center;
-    }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .wrap {
-      width: 100%;
-      max-width: 860px;
-      padding: 22px 18px 44px;
-    }
+.wrap {
+  width: 100%;
+  max-width: 860px;
+  padding: 22px 18px 44px;
+  flex: 1;
+}
 
     .top {
       text-align: center;
@@ -273,6 +276,26 @@
 
     .lang-block { display: none; }
     .lang-block.active { display: block; }
+
+    .footer-legal {
+  text-align: center;
+  color: rgba(255,255,255,.9);
+  padding: 30px 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+}
+
+.footer-legal p {
+  margin: 14px 0 0;
+}
+
+.footer-legal a {
+  color: #c7a671;
+  font-weight: bold;
+  text-decoration: underline;
+}
 
     @media (max-width: 700px) {
       .top h1 { font-size: 1.8rem; }
@@ -632,5 +655,18 @@
 
     setLanguage(initialLang);
   </script>
+
+  <footer class="footer-legal">
+    <div>
+      <strong>L'Abrì di Martini Emanuel</strong><br>
+      Via Francia N 3, Fraz. Pontebernardo, 12010 Pietraporzio (CN)<br>
+      P.IVA: 03493740041<br>
+      CIN IT004167B4SR5N3EAA
+    </div>
+
+    <p>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+    </p>
+  </footer>
 </body>
 </html>
