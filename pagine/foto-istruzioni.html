@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Foto e istruzioni arrivo | Affittacamere L'Abrì</title>
+  <meta name="description" content="Foto e istruzioni utili per raggiungere Affittacamere L'Abrì, accedere alla struttura, trovare le camere, le chiavi e il Wi-Fi.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Affittacamere L'Abrì">
+  <link rel="canonical" href="https://www.labri.it/pagine/foto-istruzioni.html">
+
+  <style>
+    :root {
+      --bg1: #324b63;
+      --bg2: #66707d;
+      --card: rgba(247, 241, 232, 0.97);
+      --text: #31251d;
+      --muted: #6d6258;
+      --wood: #8a5b3d;
+      --wood-dark: #6f472f;
+      --forest: #55684d;
+      --rust: #b46e45;
+      --stone: #ded4c8;
+      --cream: #f7f1e8;
+      --gold: #c7a671;
+      --shadow: 0 16px 38px rgba(0,0,0,.15);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 960px;
+      padding: 22px 18px 44px;
+      flex: 1;
+    }
+
+    .top {
+      text-align: center;
+      color: #fff;
+      padding: 18px 8px 10px;
+    }
+
+    .top h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      text-shadow: 0 2px 10px rgba(0,0,0,.14);
+    }
+
+    .top p {
+      margin: 8px 0 4px;
+      font-size: 1.15rem;
+      opacity: .95;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 6px auto 12px;
+      width: fit-content;
+      flex-wrap: wrap;
+    }
+
+    .lang-switch button {
+      border: 0;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease;
+      background: transparent;
+      padding: 0;
+    }
+
+    .lang-switch button:hover {
+      transform: translateY(-1px) scale(1.04);
+    }
+
+    .lang-switch button.flag-btn {
+      width: 54px;
+      height: 54px;
+      padding: 4px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      box-shadow: 0 6px 16px rgba(0,0,0,.16);
+    }
+
+    .lang-switch button.flag-btn img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .lang-switch button.active {
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,.96),
+        0 0 0 6px rgba(199,166,113,.30),
+        0 8px 20px rgba(0,0,0,.18);
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(247,241,232,0.98), rgba(241,234,224,0.96));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 22px;
+      border: 1px solid rgba(111,71,47,.12);
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .section {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(111,71,47,.12);
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 14px;
+      color: var(--text);
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .photo-card {
+      background: rgba(255,255,255,.55);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(111,71,47,.14);
+      box-shadow: 0 8px 18px rgba(0,0,0,.08);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 260px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .photo-card.wifi-card img {
+      height: 190px;
+    }
+
+    .photo-text {
+      padding: 16px;
+    }
+
+    .photo-text h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .photo-text p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .wifi-live-box {
+      margin-top: 12px;
+      background: #f4ece2;
+      border: 2px solid rgba(138,91,61,.18);
+      border-radius: 16px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+
+    .wifi-live-label {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .wifi-live-password {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #6f472f;
+      word-break: break-word;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .actions a,
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 18px;
+      padding: 14px 18px;
+      min-height: 58px;
+      transition: transform .15s ease, box-shadow .15s ease;
+      border: 2px solid rgba(111,71,47,.18);
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    }
+
+    .actions a:hover,
+    .map-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+    }
+
+    .btn-home,
+    .btn-accesso,
+    .map-link {
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(245,239,231,.88));
+      color: var(--text);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(180deg, #55684d, #46563f);
+      color: #fff;
+    }
+
+    .lang-block { display: none; }
+    .lang-block.active { display: block; }
+
+    .footer-legal {
+      text-align: center;
+      color: rgba(255,255,255,.9);
+      padding: 30px 10px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+    }
+
+    .footer-legal a {
+      color: #c7a671;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .top h1 { font-size: 1.8rem; }
+      .card { padding: 22px 16px; }
+      .actions a, .map-link { width: 100%; text-align: center; }
+      .lang-switch button.flag-btn { width: 48px; height: 48px; }
+      .photo-card img { height: auto; }
+      .photo-card.wifi-card img { height: auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>Affittacamere L'Abrì</h1>
+      <p id="page-subtitle">Foto e istruzioni arrivo</p>
+    </div>
+
+    <div class="lang-switch" role="tablist" aria-label="Language selector">
+      <button id="btn-it" class="flag-btn" onclick="setLanguage('it')" aria-label="Italiano" title="Italiano">
+        <img src="https://flagcdn.com/w80/it.png" alt="Italiano">
+      </button>
+      <button id="btn-en" class="flag-btn" onclick="setLanguage('en')" aria-label="English" title="English">
+        <img src="https://flagcdn.com/w80/gb.png" alt="English">
+      </button>
+      <button id="btn-fr" class="flag-btn" onclick="setLanguage('fr')" aria-label="Français" title="Français">
+        <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+      </button>
+      <button id="btn-de" class="flag-btn" onclick="setLanguage('de')" aria-label="Deutsch" title="Deutsch">
+        <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
+      </button>
+    </div>
+
+    <div class="card">
+
+      <div class="lang-block lang-it">
+        <div class="intro">
+          Seguite le immagini qui sotto per raggiungere facilmente Affittacamere L'Abrì, trovare il parcheggio, accedere alle camere, alle chiavi e al Wi-Fi.
+        </div>
+
+        <div class="section">
+          <h2>📍 Arrivo e parcheggio</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa.jpg" alt="Mappa arrivo">
+              <div class="photo-text">
+                <h3>Mappa arrivo</h3>
+                <p>Seguite la SS21 fino a Pontebernardo. La struttura si trova nel centro del paese.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa2.jpg" alt="Vista dall'alto">
+              <div class="photo-text">
+                <h3>Vista dall'alto</h3>
+                <p>Indicazioni di arrivo da Italia e Francia, con posizione della struttura e parcheggi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🚪 Ingressi camere</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso1.2.3%26%20colazioni%26chiavi.jpg" alt="Ingresso camere 1 2 3">
+              <div class="photo-text">
+                <h3>Camere 1, 2, 3</h3>
+                <p>Ingresso principale per camere 1, 2 e 3, locale colazioni e zona chiavi.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso4%265.jpg" alt="Ingresso camere 4 e 5">
+              <div class="photo-text">
+                <h3>Camere 4 e 5</h3>
+                <p>Ingresso dedicato per le camere 4 e 5.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Esternox4%265.jpg" alt="Percorso esterno camere 4 e 5">
+              <div class="photo-text">
+                <h3>Percorso esterno</h3>
+                <p>Seguite il percorso indicato per raggiungere l'ingresso delle camere 4 e 5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>☕ Colazioni, chiavi e Wi-Fi</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Colazioni.jpg" alt="Locale colazioni">
+              <div class="photo-text">
+                <h3>Locale colazioni</h3>
+                <p>La colazione viene preparata la sera ed è disponibile autonomamente al mattino.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Chiavi.jpg" alt="Chiavi camere">
+              <div class="photo-text">
+                <h3>Chiavi camere</h3>
+                <p>Le chiavi delle camere si trovano vicino alla macchina del caffè.</p>
+              </div>
+            </div>
+
+            <div class="photo-card wifi-card">
+              <img src="../immagini/Istruzioni/Wifi.jpg" alt="Wi-Fi L'Abrì">
+              <div class="photo-text">
+                <h3>Wi-Fi</h3>
+                <p>SSID: L'Abrì Affittacamere</p>
+                <div class="wifi-live-box">
+                  <p class="wifi-live-label">La password Wi-Fi del giorno è:</p>
+                  <div class="wifi-live-password" data-wifi-password>Caricamento...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lang-block lang-en">
+        <div class="intro">
+          Follow the pictures below to easily reach Affittacamere L'Abrì, find the parking area, access the rooms, locate the keys and connect to Wi-Fi.
+        </div>
+
+        <div class="section">
+          <h2>📍 Arrival and parking</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa.jpg" alt="Arrival map">
+              <div class="photo-text">
+                <h3>Arrival map</h3>
+                <p>Follow the SS21 road to Pontebernardo. The property is located in the centre of the village.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa2.jpg" alt="Aerial view">
+              <div class="photo-text">
+                <h3>Aerial view</h3>
+                <p>Arrival directions from Italy and France, with the property location and parking areas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🚪 Room entrances</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso1.2.3%26%20colazioni%26chiavi.jpg" alt="Entrance rooms 1 2 3">
+              <div class="photo-text">
+                <h3>Rooms 1, 2, 3</h3>
+                <p>Main entrance for rooms 1, 2 and 3, breakfast room and key area.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso4%265.jpg" alt="Entrance rooms 4 and 5">
+              <div class="photo-text">
+                <h3>Rooms 4 and 5</h3>
+                <p>Dedicated entrance for rooms 4 and 5.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Esternox4%265.jpg" alt="External path rooms 4 and 5">
+              <div class="photo-text">
+                <h3>External path</h3>
+                <p>Follow the indicated external path to reach the entrance for rooms 4 and 5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>☕ Breakfast, keys and Wi-Fi</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Colazioni.jpg" alt="Breakfast room">
+              <div class="photo-text">
+                <h3>Breakfast room</h3>
+                <p>Breakfast is prepared in the evening and is available independently in the morning.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Chiavi.jpg" alt="Room keys">
+              <div class="photo-text">
+                <h3>Room keys</h3>
+                <p>The room keys are located near the coffee machine.</p>
+              </div>
+            </div>
+
+            <div class="photo-card wifi-card">
+              <img src="../immagini/Istruzioni/Wifi.jpg" alt="Wi-Fi L'Abrì">
+              <div class="photo-text">
+                <h3>Wi-Fi</h3>
+                <p>SSID: L'Abrì Affittacamere</p>
+                <div class="wifi-live-box">
+                  <p class="wifi-live-label">Today’s Wi-Fi password is:</p>
+                  <div class="wifi-live-password" data-wifi-password>Loading...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lang-block lang-fr">
+        <div class="intro">
+          Suivez les images ci-dessous pour rejoindre facilement Affittacamere L'Abrì, trouver le parking, accéder aux chambres, trouver les clés et vous connecter au Wi-Fi.
+        </div>
+
+        <div class="section">
+          <h2>📍 Arrivée et parking</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa.jpg" alt="Carte d'arrivée">
+              <div class="photo-text">
+                <h3>Carte d'arrivée</h3>
+                <p>Suivez la route SS21 jusqu'à Pontebernardo. La structure se trouve au centre du village.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa2.jpg" alt="Vue aérienne">
+              <div class="photo-text">
+                <h3>Vue aérienne</h3>
+                <p>Indications d'arrivée depuis l'Italie et la France, avec l'emplacement de la structure et des parkings.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🚪 Entrées des chambres</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso1.2.3%26%20colazioni%26chiavi.jpg" alt="Entrée chambres 1 2 3">
+              <div class="photo-text">
+                <h3>Chambres 1, 2, 3</h3>
+                <p>Entrée principale pour les chambres 1, 2 et 3, la salle du petit-déjeuner et la zone des clés.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso4%265.jpg" alt="Entrée chambres 4 et 5">
+              <div class="photo-text">
+                <h3>Chambres 4 et 5</h3>
+                <p>Entrée dédiée pour les chambres 4 et 5.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Esternox4%265.jpg" alt="Parcours extérieur chambres 4 et 5">
+              <div class="photo-text">
+                <h3>Parcours extérieur</h3>
+                <p>Suivez le parcours extérieur indiqué pour rejoindre l'entrée des chambres 4 et 5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>☕ Petit-déjeuner, clés et Wi-Fi</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Colazioni.jpg" alt="Salle du petit-déjeuner">
+              <div class="photo-text">
+                <h3>Salle du petit-déjeuner</h3>
+                <p>Le petit-déjeuner est préparé le soir et disponible en autonomie le matin.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Chiavi.jpg" alt="Clés des chambres">
+              <div class="photo-text">
+                <h3>Clés des chambres</h3>
+                <p>Les clés des chambres se trouvent près de la machine à café.</p>
+              </div>
+            </div>
+
+            <div class="photo-card wifi-card">
+              <img src="../immagini/Istruzioni/Wifi.jpg" alt="Wi-Fi L'Abrì">
+              <div class="photo-text">
+                <h3>Wi-Fi</h3>
+                <p>SSID : L'Abrì Affittacamere</p>
+                <div class="wifi-live-box">
+                  <p class="wifi-live-label">Le mot de passe Wi-Fi du jour est :</p>
+                  <div class="wifi-live-password" data-wifi-password>Chargement...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lang-block lang-de">
+        <div class="intro">
+          Folgen Sie den Bildern unten, um Affittacamere L'Abrì leicht zu erreichen, den Parkplatz zu finden, zu den Zimmern zu gelangen, die Schlüssel zu finden und sich mit dem WLAN zu verbinden.
+        </div>
+
+        <div class="section">
+          <h2>📍 Ankunft und Parkplatz</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa.jpg" alt="Anfahrtskarte">
+              <div class="photo-text">
+                <h3>Anfahrtskarte</h3>
+                <p>Folgen Sie der Straße SS21 bis Pontebernardo. Die Unterkunft befindet sich im Zentrum des Dorfes.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Mappa2.jpg" alt="Luftansicht">
+              <div class="photo-text">
+                <h3>Luftansicht</h3>
+                <p>Anfahrtsinformationen aus Italien und Frankreich, mit Lage der Unterkunft und Parkplätzen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🚪 Zimmereingänge</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso1.2.3%26%20colazioni%26chiavi.jpg" alt="Eingang Zimmer 1 2 3">
+              <div class="photo-text">
+                <h3>Zimmer 1, 2, 3</h3>
+                <p>Haupteingang für Zimmer 1, 2 und 3, Frühstücksraum und Schlüsselbereich.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Ingresso4%265.jpg" alt="Eingang Zimmer 4 und 5">
+              <div class="photo-text">
+                <h3>Zimmer 4 und 5</h3>
+                <p>Separater Eingang für Zimmer 4 und 5.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Esternox4%265.jpg" alt="Außenweg Zimmer 4 und 5">
+              <div class="photo-text">
+                <h3>Außenweg</h3>
+                <p>Folgen Sie dem angegebenen Außenweg zum Eingang der Zimmer 4 und 5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>☕ Frühstück, Schlüssel und WLAN</h2>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Colazioni.jpg" alt="Frühstücksraum">
+              <div class="photo-text">
+                <h3>Frühstücksraum</h3>
+                <p>Das Frühstück wird am Abend vorbereitet und steht morgens selbstständig zur Verfügung.</p>
+              </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="../immagini/Istruzioni/Chiavi.jpg" alt="Zimmerschlüssel">
+              <div class="photo-text">
+                <h3>Zimmerschlüssel</h3>
+                <p>Die Zimmerschlüssel befinden sich neben der Kaffeemaschine.</p>
+              </div>
+            </div>
+
+            <div class="photo-card wifi-card">
+              <img src="../immagini/Istruzioni/Wifi.jpg" alt="WLAN L'Abrì">
+              <div class="photo-text">
+                <h3>WLAN</h3>
+                <p>SSID: L'Abrì Affittacamere</p>
+                <div class="wifi-live-box">
+                  <p class="wifi-live-label">Das heutige WLAN-Passwort lautet:</p>
+                  <div class="wifi-live-password" data-wifi-password>Lädt...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a id="action-home" class="btn-home" href="../index.html">🏠 Home</a>
+        <a class="btn-accesso" id="accesso-link" href="accesso.html?lang=it">🔐 Istruzioni accesso</a>
+        <a id="action-whatsapp" class="btn-whatsapp" href="https://wa.me/393335984119" target="_blank" rel="noopener noreferrer">📲 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const initialLang = params.get('lang') || 'it';
+
+    function getWifiPassword() {
+      const now = new Date();
+      const day = String(now.getDate()).padStart(2, '0');
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const year = String(now.getFullYear()).slice(-2);
+      return `labri${day}${month}${year}`;
+    }
+
+    function updateWifiPassword() {
+      const password = getWifiPassword();
+      document.querySelectorAll('[data-wifi-password]').forEach(box => {
+        box.textContent = password;
+      });
+    }
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-block').forEach(block => block.classList.remove('active'));
+      document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+
+      const activeBlock = document.querySelector('.lang-' + lang);
+      const activeButton = document.getElementById('btn-' + lang);
+
+      if (activeBlock) activeBlock.classList.add('active');
+      if (activeButton) activeButton.classList.add('active');
+
+      const titles = {
+        it: 'Foto e istruzioni arrivo',
+        en: 'Arrival photos and instructions',
+        fr: "Photos et instructions d'arrivée",
+        de: 'Ankunftsfotos und Anleitung'
+      };
+
+      const accessoLabels = {
+        it: '🔐 Istruzioni accesso',
+        en: '🔐 Access instructions',
+        fr: "🔐 Instructions d'accès",
+        de: '🔐 Zugangsanleitung'
+      };
+
+      const actionLabels = {
+        it: { home: '🏠 Home', whatsapp: '📲 WhatsApp' },
+        en: { home: '🏠 Home', whatsapp: '📲 WhatsApp' },
+        fr: { home: '🏠 Accueil', whatsapp: '📲 WhatsApp' },
+        de: { home: '🏠 Startseite', whatsapp: '📲 WhatsApp' }
+      };
+
+      document.getElementById('page-subtitle').textContent = titles[lang] || titles.it;
+
+      const accessoLink = document.getElementById('accesso-link');
+      accessoLink.href = 'accesso.html?lang=' + lang;
+      accessoLink.textContent = accessoLabels[lang] || accessoLabels.it;
+
+      const labels = actionLabels[lang] || actionLabels.it;
+      document.getElementById('action-home').textContent = labels.home;
+      document.getElementById('action-whatsapp').textContent = labels.whatsapp;
+
+      const newUrl = new URL(window.location);
+      newUrl.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', newUrl);
+    }
+
+    setLanguage(initialLang);
+    updateWifiPassword();
+    setInterval(updateWifiPassword, 60000);
+  </script>
+
+  <footer class="footer-legal">
+    <div>
+      <strong>L'Abrì di Martini Emanuel</strong><br>
+      Via Francia N 3, Fraz. Pontebernardo, 12010 Pietraporzio (CN)<br>
+      P.IVA: 03493740041<br>
+      CIN IT004167B4SR5N3EAA
+    </div>
+
+    <p>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+    </p>
+  </footer>
+</body>
+</html>
