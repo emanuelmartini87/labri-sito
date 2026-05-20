@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Accesso Domotica Camere | Affittacamere L'Abrì</title>
+  <meta name="description" content="Accesso locale alla domotica camere di Affittacamere L'Abrì. Disponibile solo quando si è connessi alla rete Wi-Fi della struttura.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#324b63">
+
+  <style>
+    :root {
+      --bg1: #324b63;
+      --bg2: #66707d;
+      --card: rgba(247, 241, 232, 0.97);
+      --text: #31251d;
+      --muted: #6d6258;
+      --wood: #8a5b3d;
+      --wood-dark: #6f472f;
+      --forest: #55684d;
+      --rust: #b46e45;
+      --stone: #ded4c8;
+      --cream: #f7f1e8;
+      --gold: #c7a671;
+      --shadow: 0 16px 38px rgba(0,0,0,.15);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 860px;
+      padding: 22px 18px 44px;
+    }
+
+    .hero {
+      color: #fff;
+      text-align: center;
+      padding: 18px 8px 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: .2px;
+      text-shadow: 0 2px 10px rgba(0,0,0,.14);
+    }
+
+    .subtitle {
+      margin: 8px 0 4px;
+      font-size: 1.15rem;
+      opacity: .95;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 14px auto 18px;
+      width: fit-content;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      border: 0;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+      background: transparent;
+      padding: 0;
+    }
+
+    .lang-btn:hover {
+      transform: translateY(-1px) scale(1.04);
+    }
+
+    .flag-btn {
+      width: 54px;
+      height: 54px;
+      padding: 4px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      box-shadow: 0 6px 16px rgba(0,0,0,.16);
+    }
+
+    .flag-btn img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .flag-btn.active {
+      box-shadow:
+        0 0 0 2px rgba(255,255,255,.96),
+        0 0 0 6px rgba(199,166,113,.30),
+        0 8px 20px rgba(0,0,0,.18);
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(247,241,232,0.98), rgba(241,234,224,0.96));
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+      border: 1px solid rgba(111,71,47,.12);
+      text-align: center;
+    }
+
+    .card-title {
+      margin: 0 0 14px;
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      line-height: 1.12;
+    }
+
+    .card-copy {
+      margin: 0 auto 18px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.06rem;
+      line-height: 1.75;
+    }
+
+    .local-box {
+      margin: 18px auto 22px;
+      padding: 16px 18px;
+      max-width: 660px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.48);
+      border: 1px solid rgba(111,71,47,.14);
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .button-row {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 66px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-size: 1.08rem;
+      font-weight: 700;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      padding: 12px 16px;
+      text-align: center;
+      border: 2px solid rgba(111,71,47,.18);
+      box-shadow: 0 8px 18px rgba(0,0,0,.10);
+    }
+
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(0,0,0,.14);
+    }
+
+    .btn-orange {
+      background: linear-gradient(180deg, #b46e45, #9f5f3a);
+      color: #fff;
+      border-color: rgba(255,255,255,.10);
+    }
+
+    .btn-light {
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(245,239,231,.88));
+      color: var(--text);
+      border-color: rgba(111,71,47,.16);
+    }
+
+    .btn-light:hover {
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(248,243,236,.98));
+    }
+
+    .notice {
+      background: rgba(255,255,255,.16);
+      color: #fff;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-top: 8px;
+      line-height: 1.7;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
+      color: rgba(255,255,255,.92);
+      padding-top: 10px;
+      font-size: .98rem;
+      line-height: 1.7;
+    }
+
+    .hidden { display: none; }
+
+    @media (min-width: 720px) {
+      .button-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 719px) {
+      .flag-btn {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1>Affittacamere L'Abrì</h1>
+      <p class="subtitle">Accesso Domotica Camere</p>
+
+      <div class="lang-switch" role="tablist" aria-label="Language selector">
+        <button class="lang-btn flag-btn active" data-lang="it" aria-label="Italiano" title="Italiano">
+          <img src="https://flagcdn.com/w80/it.png" alt="Italiano">
+        </button>
+        <button class="lang-btn flag-btn" data-lang="en" aria-label="English" title="English">
+          <img src="https://flagcdn.com/w80/gb.png" alt="English">
+        </button>
+        <button class="lang-btn flag-btn" data-lang="fr" aria-label="Français" title="Français">
+          <img src="https://flagcdn.com/w80/fr.png" alt="Français">
+        </button>
+        <button class="lang-btn flag-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">
+          <img src="https://flagcdn.com/w80/de.png" alt="Deutsch">
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card lang-content" data-lang-content="it">
+        <h2 class="card-title">Accesso Domotica Camere</h2>
+        <p class="card-copy">
+          Da questa pagina puoi aprire la dashboard locale per la gestione della domotica delle camere.
+        </p>
+        <div class="local-box">
+          Questo collegamento funziona solo quando sei connesso alla rete Wi-Fi della struttura L'Abrì.
+          Se sei fuori dalla struttura o usi la rete dati del telefono, la pagina non si aprirà.
+        </div>
+        <div class="button-row">
+          <a class="action-btn btn-orange" href="http://192.168.1.90" target="_blank" rel="noopener">Apri Domotica Camere</a>
+          <a class="action-btn btn-light" href="/">Torna alla Home</a>
+        </div>
+      </section>
+
+      <section class="card lang-content hidden" data-lang-content="en">
+        <h2 class="card-title">Room Automation Access</h2>
+        <p class="card-copy">
+          From this page you can open the local dashboard for room automation management.
+        </p>
+        <div class="local-box">
+          This link works only when you are connected to the L'Abrì property Wi-Fi network.
+          If you are outside the property or using mobile data, the page will not open.
+        </div>
+        <div class="button-row">
+          <a class="action-btn btn-orange" href="http://192.168.1.90" target="_blank" rel="noopener">Open Room Automation</a>
+          <a class="action-btn btn-light" href="/?lang=en">Back to Home</a>
+        </div>
+      </section>
+
+      <section class="card lang-content hidden" data-lang-content="fr">
+        <h2 class="card-title">Accès Domotique Chambres</h2>
+        <p class="card-copy">
+          Depuis cette page, vous pouvez ouvrir le tableau de bord local pour la gestion de la domotique des chambres.
+        </p>
+        <div class="local-box">
+          Ce lien fonctionne uniquement lorsque vous êtes connecté au réseau Wi-Fi de l'établissement L'Abrì.
+          Si vous êtes à l'extérieur ou si vous utilisez les données mobiles, la page ne s'ouvrira pas.
+        </div>
+        <div class="button-row">
+          <a class="action-btn btn-orange" href="http://192.168.1.90" target="_blank" rel="noopener">Ouvrir la domotique</a>
+          <a class="action-btn btn-light" href="/?lang=fr">Retour à l'accueil</a>
+        </div>
+      </section>
+
+      <section class="card lang-content hidden" data-lang-content="de">
+        <h2 class="card-title">Zugang Zimmer-Automation</h2>
+        <p class="card-copy">
+          Über diese Seite können Sie das lokale Dashboard zur Verwaltung der Zimmer-Automation öffnen.
+        </p>
+        <div class="local-box">
+          Dieser Link funktioniert nur, wenn Sie mit dem WLAN-Netzwerk der Unterkunft L'Abrì verbunden sind.
+          Wenn Sie außerhalb der Unterkunft sind oder mobile Daten verwenden, wird die Seite nicht geöffnet.
+        </div>
+        <div class="button-row">
+          <a class="action-btn btn-orange" href="http://192.168.1.90" target="_blank" rel="noopener">Zimmer-Automation öffnen</a>
+          <a class="action-btn btn-light" href="/?lang=de">Zurück zur Startseite</a>
+        </div>
+      </section>
+
+      <div class="notice lang-content" data-lang-content="it">
+        Consiglio: per evitare confusione agli ospiti, tieni questa pagina raggiungibile solo dal pulsante dedicato e non indicizzarla su Google.
+      </div>
+      <div class="notice lang-content hidden" data-lang-content="en">
+        Tip: to avoid confusion for guests, keep this page accessible only from the dedicated button and do not index it on Google.
+      </div>
+      <div class="notice lang-content hidden" data-lang-content="fr">
+        Conseil : pour éviter toute confusion, gardez cette page accessible uniquement depuis le bouton dédié et ne l'indexez pas sur Google.
+      </div>
+      <div class="notice lang-content hidden" data-lang-content="de">
+        Tipp: Um Verwirrung zu vermeiden, sollte diese Seite nur über den speziellen Button erreichbar sein und nicht bei Google indexiert werden.
+      </div>
+    </main>
+
+    <footer class="footer">
+      <strong>L'Abrì di Martini Emanuel</strong><br>
+      Via Francia N 3, Fraz. Pontebernardo, 12010 Pietraporzio (CN)<br>
+      P.IVA: 03493740041<br>
+      CIN IT004167B4SR5N3EAA
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-lang]');
+    const sections = document.querySelectorAll('[data-lang-content]');
+
+    function setLanguage(lang) {
+      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+      sections.forEach(section => {
+        section.classList.toggle('hidden', section.dataset.langContent !== lang);
+      });
+      document.documentElement.lang = lang;
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const urlLang = params.get('lang');
+    const supportedLangs = ['it', 'en', 'fr', 'de'];
+
+    if (supportedLangs.includes(urlLang)) {
+      setLanguage(urlLang);
+    } else {
+      setLanguage('it');
+    }
+  </script>
+</body>
+</html>
