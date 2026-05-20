@@ -331,6 +331,31 @@
       margin-top: 8px;
       line-height: 1.7;
       box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .notice-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(245,239,231,.96));
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 6px 14px rgba(0,0,0,.12);
+      border: 1px solid rgba(111,71,47,.16);
+    }
+
+    .notice-link:hover {
+      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,243,236,.98));
+      transform: translateY(-1px);
     }
 
     .code-box {
@@ -558,16 +583,20 @@
       </section>
 
       <div class="notice lang-content" data-lang-content="it">
-        Check-in dalle 16:30 - Check-out entro le 10:30 -
+        <span>Check-in dalle 16:30 - Check-out entro le 10:30 -</span>
+        <a class="notice-link" href="pagine/accesso-domotica-camere.html?lang=it">Accesso Domotica Camere</a>
       </div>
       <div class="notice lang-content hidden" data-lang-content="en">
-        Check-in from 4:30 PM - Check-out by 10:30 AM -
+        <span>Check-in from 4:30 PM - Check-out by 10:30 AM -</span>
+        <a class="notice-link" href="pagine/accesso-domotica-camere.html?lang=en">Room Home Automation Access</a>
       </div>
       <div class="notice lang-content hidden" data-lang-content="fr">
-        Check-in à partir de 16h30 - Check-out avant 10h30 -
+        <span>Check-in à partir de 16h30 - Check-out avant 10h30 -</span>
+        <a class="notice-link" href="pagine/accesso-domotica-camere.html?lang=fr">Accès Domotique Chambres</a>
       </div>
       <div class="notice lang-content hidden" data-lang-content="de">
-        Check-in ab 16:30 Uhr - Check-out bis 10:30 Uhr -
+        <span>Check-in ab 16:30 Uhr - Check-out bis 10:30 Uhr -</span>
+        <a class="notice-link" href="pagine/accesso-domotica-camere.html?lang=de">Zimmer-Smart-Home-Zugang</a>
       </div>
     </main>
 
