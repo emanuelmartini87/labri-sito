@@ -9,4 +9,5 @@ const homeImages = [
   "immagini/Home/Giardino4.jpg",
   "immagini/Home/Giardino5.jpg",
   "immagini/Home/Ingresso1.jpg"
+  "immagini/Home/Camera3.jpg"
 ];
