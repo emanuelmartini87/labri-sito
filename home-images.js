@@ -1,4 +1,4 @@
-const homeImages = [
+window.homeImages = [
   "insegna.jpg",
   "immagini/Home/Colazione1.jpg",
   "immagini/Home/Colazione2.jpg",
