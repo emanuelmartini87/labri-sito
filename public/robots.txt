@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# TEST: impedisce indicizzazione dell’anteprima pages.dev; da cambiare al lancio.
