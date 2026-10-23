@@ -61,9 +61,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "start": "vite --host 0.0.0.0",
-    "download:images": "node scripts/download-photos.mjs",
-    "build": "npm run download:images && vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "build": "npm run verify:images && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "verify:images": "node scripts/verify-photos.mjs"
   },
   "browserslist": {
     "production": [
