@@ -82,7 +82,18 @@ export const Footer = () => {
           L&rsquo;ABR&Igrave;
         </h2>
       </div>
+{/* Dati identificativi della struttura */}
+<div className="px-5 sm:px-10 py-5 border-t border-background/15 text-center">
+  <p className="text-[11px] text-background/60 tracking-[0.12em] leading-relaxed">
+    Affittacamere L'Abrì di Martini Emanuel
+  </p>
 
+  <div className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] text-background/60 tracking-[0.08em]">
+    <span>P.IVA: 03493740041</span>
+    <span>CIR: 004167-AFF-00003</span>
+    <span>CIN: IT004167B4SR5N3EAA</span>
+  </div>
+</div>
       <div className="px-5 sm:px-10 py-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-background/45 border-t border-background/15">
         <span>{t("footer.rights")}</span>
         <span className="flex items-center gap-6">
