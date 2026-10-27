@@ -1,4 +1,4 @@
-# L'Abrì — versione TEST indipendente da Emergent
+Sito ufficiale L'Abrì - Produzione Cloudflare Pages da branch main.
 
 **Repository completo del frontend React**, derivato dall'esportazione Emergent del 23 ottobre 2026 e adattato per una pubblicazione gratuita con **GitHub + Cloudflare Pages**. Conserva layout, Framer Motion, Lenis, Tailwind CSS, quattro lingue, pagine interne, fotografie, collegamenti e design.
 
