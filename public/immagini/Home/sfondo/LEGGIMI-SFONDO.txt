@@ -1,0 +1,10 @@
+SFONDO HOMEPAGE L'ABRI
+
+Per cambiare lo sfondo, copia qui una tua foto JPEG e chiamala esattamente:
+    copertina.jpg
+
+Usa preferibilmente una foto orizzontale larga almeno 1920 px, ottimizzata per il web.
+Sostituisci il file, poi in GitHub Desktop fai Commit to test e Push origin.
+Quando sei soddisfatto del risultato, potrai portare test su main.
+
+Non inserire nomi, dati privati o documenti in questa cartella pubblica.

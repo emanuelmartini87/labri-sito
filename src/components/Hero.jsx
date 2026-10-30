@@ -2,7 +2,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { LogoMark } from "@/components/Logo";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const HERO_IMAGE =
+const HERO_IMAGE = "/immagini/Home/sfondo/copertina.jpg";
+const HERO_IMAGE_FALLBACK =
   "https://images.unsplash.com/photo-1578309830739-6226cb317b22?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxkcmFtYXRpYyUyMGFscGluZSUyMG1vdW50YWlucyUyMHBlYWslMjBjaGFsZXR8ZW58MHx8fHwxNzkyNzI1MTA2fDA&ixlib=rb-4.1.0&q=85";
 
 const MaskedLine = ({ children, delay }) => (
@@ -28,6 +29,13 @@ export const Hero = () => {
     <section id="top" data-testid="hero-section" className="relative h-[100svh] min-h-[560px] overflow-hidden">
       <motion.img
         src={HERO_IMAGE}
+        onError={(event) => {
+          const image = event.currentTarget;
+          if (image.dataset.heroFallback !== "yes") {
+            image.dataset.heroFallback = "yes";
+            image.src = HERO_IMAGE_FALLBACK;
+          }
+        }}
         alt="Vette innevate della Valle Stura all'ora dorata"
         style={{ y }}
         initial={{ scale: 1.12 }}
