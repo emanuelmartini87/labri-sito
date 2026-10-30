@@ -90,6 +90,7 @@ export const Footer = () => {
 
   <div className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[11px] text-background/60 tracking-[0.08em]">
     <span>P.IVA: 03493740041</span>
+    <span>REA: CN-294966</span>
     <span>CIR: 004167-AFF-00003</span>
     <span>CIN: IT004167B4SR5N3EAA</span>
   </div>
