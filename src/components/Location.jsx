@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Video, MapPin, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export const Location = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const [showMap,setShowMap] = useState(false);
   const hours = t("location.hours");
 
   const USEFUL_LINKS = [
@@ -88,7 +90,7 @@ export const Location = () => {
       </div>
 
       <div className="relative min-h-[380px] lg:min-h-[640px] border-t lg:border-t-0 lg:border-l border-border">
-        <iframe
+        {showMap ? <iframe
           data-testid="location-map"
           title="Mappa — Affittacamere L'Abrì, Via Francia 3, Pontebernardo, Pietraporzio"
           src="https://www.google.com/maps?q=Affittacamere+L%27Abr%C3%AC+Via+Francia+3+Pontebernardo+Pietraporzio&output=embed"
@@ -96,7 +98,7 @@ export const Location = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen
-        />
+        /> : <div className="absolute inset-0 flex flex-col items-center justify-center p-7 text-center bg-[#e9e5dc] gap-4"><MapPin className="w-9 h-9 text-primary"/><p className="max-w-sm text-sm text-[#33473e]">{({it:"La mappa è fornita da Google. Attivandola, il browser si collegherà ai server Google e potrebbe trasmettere dati personali.",en:"Google provides this map. Opening it connects your browser to Google servers and may transmit personal data.",fr:"Cette carte est fournie par Google. Son activation connecte votre navigateur aux serveurs Google.",de:"Diese Karte stammt von Google. Beim Aktivieren verbindet sich Ihr Browser mit Google-Servern."})[lang]}</p><button type="button" className="px-6 py-3 rounded-full bg-[#a85c40] text-white text-sm" onClick={()=>setShowMap(true)}>{({it:"Carica Google Maps",en:"Load Google Maps",fr:"Charger Google Maps",de:"Google Maps laden"})[lang]}</button></div>}
       </div>
     </section>
   );

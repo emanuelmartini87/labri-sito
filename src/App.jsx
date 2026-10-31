@@ -23,6 +23,7 @@ import { DomoticaPage } from "@/components/DomoticaPage";
 import { AccessoPage } from "@/components/AccessoPage";
 import { DoveMangiarePage } from "@/components/DoveMangiarePage";
 import { PrivacyPage } from "@/components/PrivacyPage";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const Home = ({ rooms, selectedRoom, setSelectedRoom, onBook }) => {
   const { hash } = useLocation();
@@ -107,6 +108,7 @@ function App() {
           </Routes>
           <Footer />
           <ChatWidget />
+          <CookieConsent />
         </BrowserRouter>
         <Toaster position="top-center" toastOptions={{ style: { borderRadius: 0, border: "1px solid hsl(var(--foreground))", background: "hsl(var(--background))", color: "hsl(var(--foreground))" } }} />
       </div>

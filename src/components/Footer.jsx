@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, MapPin, MessageCircle } from "lucide-react";
 import { LogoMark } from "@/components/Logo";
+import { openConsentSettings } from "@/privacy/consent";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const SOCIAL = {
@@ -11,7 +12,7 @@ const SOCIAL = {
 };
 
 export const Footer = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <footer data-testid="site-footer" className="bg-foreground text-background">
@@ -104,6 +105,7 @@ export const Footer = () => {
         <span>{t("footer.rights")}</span>
         <span className="flex items-center gap-6">
           <Link to="/privacy" data-testid="footer-privacy-link" className="hover:text-background/80 transition-colors duration-300">{t("footer.privacy")}</Link>
+          <button type="button" onClick={openConsentSettings} className="hover:text-background/80 transition-colors duration-300">{({it:"Preferenze cookie",en:"Cookie settings",fr:"Préférences cookies",de:"Cookie-Einstellungen"})[lang] || "Preferenze cookie"}</button>
           <span>{t("footer.place")}</span>
         </span>
       </div>

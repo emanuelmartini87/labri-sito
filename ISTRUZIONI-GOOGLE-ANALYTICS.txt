@@ -1,0 +1,15 @@
+L'ABRI - Google Analytics 4 / consenso - VERSIONE TEST
+
+ID di misurazione: G-VJ759J5GKT (verificare che appartenga alla proprietà corretta)
+Non inserire manualmente altri snippet GA4/GTM in Cloudflare o in index.html.
+
+TEST:
+1) Pubblicare i file sul branch TEST con GitHub Desktop.
+2) Aprire sito TEST in incognito: il banner deve apparire.
+3) Rifiutare: in DevTools > Network cercare googletagmanager, google-analytics: non devono esserci richieste GA.
+4) Aprire Preferenze cookie dal footer, accettare: il tag Google deve caricarsi.
+5) Revocare dal footer: la pagina si ricarica per fermare i tag caricati.
+6) Verificare anche il consenso prima della comparsa di Google Maps, in Dove siamo.
+7) Google Analytics > Amministrazione > Stream di dati > Web: verificare lo stream G-VJ759J5GKT e che la raccolta non sia disattivata; Rapporti > Tempo reale per una visita fatta accettando.
+
+NOTA: Questa e una implementazione tecnica, non una certificazione legale. Completare l'informativa privacy con titolare effettivo, finalità, base giuridica, tempi di conservazione, trasferimenti, link all'informativa Google e verificare eventuali servizi terzi (fonts, chat, video e Cloudflare).
