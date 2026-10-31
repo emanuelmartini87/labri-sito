@@ -15,8 +15,8 @@ export function CookieConsent() {
  useEffect(()=>{ if(getConsent()?.analytics) startAnalytics(); const open=()=>{setAnalytics(getConsent()?.analytics||false);setAdvanced(true);setVisible(true)}; window.addEventListener('labri-consent-open',open); return ()=>window.removeEventListener('labri-consent-open',open);},[]);
  const pick=(value)=>{saveConsent(value);setVisible(false);setAdvanced(false)};
  if(!visible) return null;
- return <div role="dialog" aria-modal="true" aria-label={t.heading} className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center bg-black/45 p-3 sm:p-6">
-   <div className="w-full max-w-lg bg-[#f8f5ee] text-[#293c35] shadow-2xl border border-[#e0d9cb] rounded-2xl p-6 sm:p-8 max-h-[92vh] overflow-y-auto">
+ return <div role="dialog" aria-modal="true" aria-label={t.heading} className="fixed inset-0 z-[9999] flex items-end justify-end bg-black/35 p-3 sm:p-6">
+   <div className="w-full sm:max-w-md lg:max-w-lg bg-[#f8f5ee] text-[#293c35] shadow-2xl border border-[#e0d9cb] rounded-2xl p-6 sm:p-8 max-h-[92vh] overflow-y-auto">
     <p className="text-[10px] uppercase tracking-[.3em] text-[#a65d40] mb-2">L'ABRÌ · PONTEBERNARDO</p>
     <h2 className="text-2xl sm:text-3xl font-serif mb-3">{t.heading}</h2>
     <p className="text-sm leading-relaxed text-[#526259] mb-4">{t.desc}</p>
